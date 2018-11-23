@@ -1,0 +1,19 @@
+#iniciar{
+  margin-left: 50px;
+}
+#registrar{
+  margin-right: 40px;
+}
+#buscar{
+  margin-left: unset;
+}
+#buscador{
+  margin-left: 180px;
+}
+.brand-logo img{
+  margin-top: 2%;
+  margin-left: 2%;
+}
+ul{
+  margin-right: 5%;
+}
