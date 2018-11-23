@@ -4,39 +4,41 @@
     <meta charset="utf-8">
     <!-- ========== Favicon ============== -->
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon_template.png"/>
+    <!-- ========== Fonts ============== -->
+    <link rel="stylesheet" href="" >
     <!-- ========== CSS ============== -->
     <link rel="stylesheet" href="assets/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/estils.css">
     <!-- ========== JavaScript ============== -->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>'nombre de la pagina'</title>
   </head>
   <body>
     <nav class="white">
-            <div class="nav-wrapper">
-              <a href="#" class="brand-logo red-text"> <img src="assets/img/logo_template.png" alt="Logo" width="20%" height="20%"> </a>
-                <ul class="hide-on-med-and-down right">
-                  <li><a href="#" class="black-text bold">Inicio</a></li>
-                  <li><a href="#" class="black-text bold">Jugadores</a></li>
-                  <li><a href="#" class="black-text bold">Equipos</a></li>
-                  <li id="buscador">
-                     <div class="center row">
-                        <div class="col l12">
-                          <div class="row" id="topbarsearch">
-                            <div class="input-field col s6 l12 black-text">
-                              <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete black-text">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </li>
-                    <li ><a id="buscar" class="waves-effect waves-light btn blue">Buscar</a></li>
-                    <li ><a id="iniciar" class="waves-effect waves-light btn white black-text">Iniciar Session</a></li>
-                    <li ><a id="registrar" class="waves-effect waves-light btn blue">Registrar-se</a></li>
-                </ul>
-            </div>
-          </nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo black-text"> <img class="responsive-img logo" src="assets/img/logo_template.png" alt="Logo"></a>
+        <ul class="hide-on-med-and-down right">
+          <li class="divider-left"><a href="#" class="black-text">Inicio</a></li>
+          <li class="divider-left divider-right"><a href="#" class="black-text">Jugadores</a></li>
+          <li class="divider-right"><a href="#" class="black-text">Equipos</a></li>
+          <li id="buscador">
+             <div class="center row ">
+                <div class="col l12">
+                  <div class="row" id="topbarsearch">
+                    <div class="input-field col s6 l12 black-text">
+                      <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete black-text">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a id="buscar" class="waves-effect waves-light btn blue">Buscar</a></li>
+            <li id="iniciar"><a class="waves-effect waves-dark btn white black-text">Log-in</a></li>
+            <li id="registrar"><a class="waves-effect waves-light btn blue">Registrar-se</a></li>
+        </ul>
+      </div>
+    </nav>
   </body>
 </html>
