@@ -1,7 +1,10 @@
 body{
 }
+ul{
+  width:100%;
+}
 @media only screen and (min-width : 990px) and (max-width : 1300px)  {
-  .proba{
+  .menu{
     margin-left: 10%;
   }
   #iniciar{
@@ -18,7 +21,7 @@ body{
   }
 }
 @media only screen and (min-width : 1300px) and (max-width : 1500px)  {
-  .proba{
+  .menu{
     margin-left: 15%;
   }
   #iniciar{
@@ -35,7 +38,7 @@ body{
   }
 }
 @media only screen and (min-width : 1500px) and (max-width : 1700px)  {
-  .proba{
+  .menu{
     margin-left: 18%;
   }
   #iniciar{
@@ -52,7 +55,7 @@ body{
   }
 }
 @media only screen and (min-width : 1700px) and (max-width : 1900px) {
-  .proba{
+  .menu{
     margin-left: 20%;
   }
   #iniciar{
@@ -69,7 +72,7 @@ body{
   }
 }
 @media only screen and (min-width : 1900px) {
-  .proba{
+  .menu{
     margin-left: 25%;
   }
   #iniciar{
