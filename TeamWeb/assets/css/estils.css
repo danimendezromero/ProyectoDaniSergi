@@ -1,18 +1,91 @@
 body{
 }
+@media only screen and (min-width : 990px) and (max-width : 1300px)  {
+  .proba{
+    margin-left: 10%;
+  }
+  #iniciar{
+    margin-left: 2%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 7%;
+  }
+}
+@media only screen and (min-width : 1300px) and (max-width : 1500px)  {
+  .proba{
+    margin-left: 15%;
+  }
+  #iniciar{
+    margin-left: 2%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 20%;
+  }
+}
+@media only screen and (min-width : 1500px) and (max-width : 1700px)  {
+  .proba{
+    margin-left: 18%;
+  }
+  #iniciar{
+    margin-left: 2%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 25%;
+  }
+}
+@media only screen and (min-width : 1700px) and (max-width : 1900px) {
+  .proba{
+    margin-left: 20%;
+  }
+  #iniciar{
+    margin-left: 2%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 30%;
+  }
+}
+@media only screen and (min-width : 1900px) {
+  .proba{
+    margin-left: 25%;
+  }
+  #iniciar{
+    margin-left: 2%;
+  }
+  #registrar{
+    margin-right: 1%;
+  }
+  #buscar{
+    margin-left: unset;
+  }
+  #buscador{
+    margin-left: 30%;
+  }
+}
 
-#iniciar{
-  margin-left: 4em;
-}
-#registrar{
-  margin-right: 2em;
-}
-#buscar{
-  margin-left: unset;
-}
-#buscador{
-  margin-left: 14em;
-}
 .logo{
   margin-top: 0.2em;
   margin-left: 0.2em;
