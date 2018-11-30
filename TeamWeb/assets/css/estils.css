@@ -1,7 +1,16 @@
 body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
 }
 ul{
   width:100%;
+}
+li {
+  font-size: 13px;
 }
 @media only screen and (min-width : 990px) and (max-width : 1300px)  {
   .menu{
@@ -88,8 +97,24 @@ ul{
     margin-left: 30%;
   }
 }
-
-.logo{
+@media only screen and (max-width: 993px) {
+  .este {
+      text-align: center;
+  }
+  .este1{
+    display: none;
+  }
+  .este2{
+    display: none;
+  }
+  .este3{
+    display: none;
+  }
+  .este4{
+    display: none;
+  }
+}
+.logon{
   margin-top: 0.2em;
   margin-left: 0.2em;
 }
@@ -101,4 +126,18 @@ ul{
 }
 nav .divider-left, nav .divider-right{
   font-weight: bold;
+}
+.logo1{
+  margin-right: 20px;
+}
+.foot{
+  font-size:13px;
+}
+.logof{
+  margin-top: 0.2em;
+  margin-left: 0.2em;
+  width: 65px;
+  height: 65px;
+  margin-top: 30px;
+  opacity: 0.5;
 }
