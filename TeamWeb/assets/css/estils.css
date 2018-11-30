@@ -3,14 +3,19 @@ body{
   min-height: 100vh;
   flex-direction: column;
 }
-main {
-  flex: 1 0 auto;
-}
 ul{
   width:100%;
 }
 li {
   font-size: 13px;
+}
+@media only screen and (max-width : 990px)  {
+  .buscarm{
+    margin-left: unset !important;
+  }
+  #buscadorm{
+    margin-left: 25%;
+  }
 }
 @media only screen and (min-width : 990px) and (max-width : 1300px)  {
   .menu{
@@ -22,7 +27,7 @@ li {
   #registrar{
     margin-right: 1%;
   }
-  #buscar{
+  .buscar{
     margin-left: unset;
   }
   #buscador{
@@ -39,7 +44,7 @@ li {
   #registrar{
     margin-right: 1%;
   }
-  #buscar{
+  .buscar{
     margin-left: unset;
   }
   #buscador{
@@ -56,7 +61,7 @@ li {
   #registrar{
     margin-right: 1%;
   }
-  #buscar{
+  .buscar{
     margin-left: unset;
   }
   #buscador{
@@ -73,7 +78,7 @@ li {
   #registrar{
     margin-right: 1%;
   }
-  #buscar{
+  .buscar{
     margin-left: unset;
   }
   #buscador{
@@ -90,7 +95,7 @@ li {
   #registrar{
     margin-right: 1%;
   }
-  #buscar{
+  .buscar{
     margin-left: unset;
   }
   #buscador{
@@ -140,4 +145,9 @@ nav .divider-left, nav .divider-right{
   height: 65px;
   margin-top: 30px;
   opacity: 0.5;
+}
+.logom{
+    margin-left: 40%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
