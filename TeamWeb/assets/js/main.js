@@ -15,4 +15,5 @@ $(document).ready(function(){
   $(".dropdown-trigger").dropdown({
     hover: true
   });
+   $('.tabs').tabs();
 });
