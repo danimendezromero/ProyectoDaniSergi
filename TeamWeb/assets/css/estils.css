@@ -26,9 +26,6 @@ li {
   }
 }
 @media only screen and (min-width : 990px) and (max-width : 1300px)  {
-  #topbarsearch{
-    width: 200px;
-  }
   .menu{
     margin-left: 10%;
   }
@@ -59,10 +56,7 @@ li {
     margin-left: unset;
   }
   #buscador{
-    margin-left: 12%;
-  }
-  #topbarsearch{
-    width: 300px;
+    margin-left: 20%;
   }
 }
 @media only screen and (min-width : 1500px) and (max-width : 1700px)  {
@@ -79,10 +73,7 @@ li {
     margin-left: unset;
   }
   #buscador{
-    margin-left: 18%;
-  }
-  #topbarsearch{
-    width: 300px;
+    margin-left: 25%;
   }
 }
 @media only screen and (min-width : 1700px) and (max-width : 1900px) {
@@ -99,10 +90,7 @@ li {
     margin-left: unset;
   }
   #buscador{
-    margin-left: 20%;
-  }
-  #topbarsearch{
-    width: 300px
+    margin-left: 30%;
   }
 }
 @media only screen and (min-width : 1900px) {
@@ -119,10 +107,7 @@ li {
     margin-left: unset;
   }
   #buscador{
-    margin-left: 20%;
-  }
-  #topbarsearch{
-    width: 300px;
+    margin-left: 30%;
   }
 }
 @media only screen and (max-width: 993px) {
