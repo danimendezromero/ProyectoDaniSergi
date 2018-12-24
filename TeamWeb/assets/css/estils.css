@@ -1,3 +1,4 @@
+/* ========== Global styles ============== */
 body, html{
   min-width: 100%;
   min-height: 100%;
@@ -8,6 +9,7 @@ body{
   min-height: 100vh;
   flex-direction: column;
 }
+
 /* ========== Navbar/Footer CSS ============== */
 ul{
   width:100%;
@@ -157,60 +159,58 @@ nav .divider-left, nav .divider-right{
     margin-top: 10%;
     margin-bottom: 10%;
 }
-.proba{
-  margin-top:50px;
+/* ========== End of Navbar/Footer CSS ============== */
+/* ========== FAQ web CSS ============== */
+.faq{
+  min-height: 100%;
 }
-/* ========== End Navbar/Footer CSS ============== */
-/* ========== LOL players CSS ============== */
-.lolp{
-  width: 80%;
+.faq1{
+  margin-top:10%;
 }
-.lolpfilter{
-  margin-top: 25px;
+.faq1 li>a:hover, .faq1 .collapsible-header:hover{
+  background-color: rgba(0, 0, 0, 0.1);
 }
-.lolpshow{
-  margin-top: 25px;
-  padding: unset !important;
-  margin-left: 15px !important;
+.faq1 .collapsible-body li a{
+  padding: 0 23.5px 0 31px;
 }
-
-.card .card-content{
-  padding: 5px !important;
+.faq1 li{
+  float:none;
+  line-height: 48px;
 }
-.my-1{
-  margin-top: 10px;
-  margin-bottom: 30px;
+.faq1 li>a{
+  color: rgba(0, 0, 0, 0.87);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 48px;
 }
-.mb-1{
-  margin-bottom: 10px;
+.faq1 .collapsible-body{
+  padding: 0;
 }
-.p-1{
-    padding: 15px;
+.active>.collapsible-header{
+  background-color: rgba(0, 0, 0, 0.1);
 }
-.age, .region{
-  margin-top: 10px;
-  margin-bottom: 10px;
+.faqcontent{
+  background-color: rgba(255, 255, 255, 1);
+  margin-top:10%;
+  height: 40em;
+  margin-bottom: 10%;
 }
-.objetive{
-  margin-top: 50px;
-  margin-bottom: 15px;
+/* ========== end of FAQ web CSS ============== */
+.error {
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px;
+  border: 1px solid #a94442;
+  color: #a94442;
+  background: #f2dede;
+  border-radius: 5px;
+  text-align: left;
 }
-h4{
-  font-weight: 700;
-}
-.contact{
-  margin-top: 30%;
-}
-.lolpshow .row{
-  margin-bottom: unset;
-}
-.divider{
-  margin-bottom: 15px;
-}
-.roles img{
-  margin-top: 5px;
-  margin-left: 2px;
-}
-.grey-text{
-  font-weight:600;
+.success {
+  color: #3c763d;
+  background: #dff0d8;
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
 }
