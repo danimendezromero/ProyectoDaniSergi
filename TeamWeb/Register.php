@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="">
   <!-- ========== CSS ============== -->
   <link rel="stylesheet" href="assets/css/materialize.min.css">
-  <link rel="stylesheet" href="assets/css/estils.css">
+  <link rel="stylesheet" href="assets/css/estils.css?v=<?php echo time(); ?>">
   <!-- ========== Icons ============== -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- ========== JavaScript ============== -->
@@ -38,7 +38,7 @@
            </div>
            <div class="row">
              <div class="input-field col s10">
-               <input id="email" type="text" class="validate" name="email" autocomplete="off">
+               <input id="email" type="email" class="validate" name="email" autocomplete="off">
                <label for="email">Email*</label>
              </div>
            </div>

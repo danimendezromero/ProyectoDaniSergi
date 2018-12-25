@@ -1,3 +1,4 @@
+<?php include('assets/php/server.php') ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,7 +21,49 @@
   <body>
     <?php include('assets/php/navbar.php') ?>
     <!-- ========== Start of Content ============== -->
+    <div class="row" style="padding-top:30px; Width:500px">
+        <div class="col s12">
+          <div class="card blue-grey darken-1">
+            <form method="post" action="login.php">
+            <div class="card-content white-text">
+              <span class="card-title">Login</span>
+              <?php include('assets/php/errors.php'); ?>
+              <div class="row">
+                <div class="input-field col s10">
+                  <input id="last_name" type="text" class="validate" name="username">
+                  <label for="last_name">Username/Email*</label>
+                </div>
+              </div>
+              <div class="row cuadrado2">
+                <div class="input-field col s10">
+                  <input id="password" type="password" class="validate" name="password">
+                  <label for="password">Password*</label>
+                </div>
+              </div>
+              <div class="row cuadrado2">
+                <div class="input-field col s10">
+                  <p>
+                    <label>
+                      <input type="checkbox" />
+                      <span style="margin-bottom: 15px;">Keep signed</span>
+                    </label>
+                  </p>
+                  <p><a href="" class="white-text">Forgotten your password</a></p>
+                  <p><a href="" class="white-text">Forgotten your username</a></p>
+                  <p>
+                </div>
+              </div>
 
+            </div>
+            <div class="card-action cuadrado1">
+
+              <button type="submit" class="waves-effect waves-light btn" name="login_user" style="margin-left:13%; margin-top:10px; width:300px;">Log In</button>
+              <p class="f1" style="text-align:center">If you don't already have an account click <a href="">Register</a></p>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
 
 
     <!-- ========== End of Content ============== -->
