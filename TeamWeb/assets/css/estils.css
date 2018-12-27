@@ -44,6 +44,7 @@ li {
   #buscador{
     margin-left: 7%;
   }
+
 }
 @media only screen and (min-width : 1300px) and (max-width : 1500px)  {
   .menu{
@@ -64,6 +65,7 @@ li {
   #topbarsearch{
     width: 300px;
   }
+
 }
 @media only screen and (min-width : 1500px) and (max-width : 1700px)  {
   .menu{
@@ -235,6 +237,24 @@ nav .divider-left, nav .divider-right{
   font-size: 17px;
 }
 /* ========== Perfil web CSS ============== */
+/* ========== Login web CSS ============== */
+.cuadrado1{
+  margin-top: -30px;
+}
+.cuadrado2{
+      margin-top: -10px;
+}
+/* ========== end of LOGIN web CSS ============== */
+/* ========== mobilNAV web CSS ============== */
+.mobilperfil{
+  padding-left:15%;
+}
+/* ========== end of mobilNAV web CSS ============== */
+/* ========== profilenav web CSS ============== */
+#profilenav{
+  padding-left: 5%;
+}
+/* ========== end of profilenav web CSS ============== */
 .error {
   width: 100%;
   margin: 0px auto;
