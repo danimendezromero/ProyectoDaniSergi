@@ -255,6 +255,63 @@ nav .divider-left, nav .divider-right{
   padding-left: 5%;
 }
 /* ========== end of profilenav web CSS ============== */
+/* ========== LOL players CSS ============== */
+.lolp{
+  width: 80%;
+  margin-top: 0;
+}
+.lolpfilter{
+  margin-top: 25px;
+}
+.lolpshow{
+  margin-top: 25px;
+  padding: unset !important;
+  margin-left: 15px !important;
+}
+.my-1{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.mb-1{
+  margin-bottom: 10px;
+}
+.p-1{
+    padding: 15px;
+}
+.age, .region{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.objetive{
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+h4{
+  font-weight: 700;
+}
+.contact{
+  margin-top: 30%;
+}
+.lolpshow .row{
+  margin-bottom: unset;
+}
+.divider{
+  margin-bottom: 15px;
+}
+.roles img{
+  margin-top: 5px;
+  margin-left: 2px;
+}
+.grey-text{
+  font-weight:600;
+}
+.loltab{
+  width:80%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* sadsdsadsa*/
 .error {
   width: 100%;
   margin: 0px auto;
