@@ -15,6 +15,7 @@
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/lolapi.js"></script>
     <title>LOL Players</title>
   </head>
   <body>
@@ -142,9 +143,9 @@
               <div class="divider"></div>
               <div class="row">
                 <div class="col l9 roles">
-                  <img src="assets/img/roles_placeholder.png" alt="" class="responsive-img">
-                  <img src="assets/img/roles_placeholder.png" alt="" class="responsive-img">
-                  <img src="assets/img/roles_placeholder.png" alt="" class="responsive-img">
+                  <img src="assets/img/roles_placeholder.png" alt="" class="responsive-img img1">
+                  <img src="assets/img/roles_placeholder.png" alt="" class="responsive-img img2">
+                  <img src="assets/img/roles_placeholder.png" alt="" class="responsive-img img3">
                 </div>
                 <div class="col l3">
                   <div class="language">
