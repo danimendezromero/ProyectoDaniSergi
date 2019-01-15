@@ -21,12 +21,12 @@
         </ul>
       </div>
       <div class="col l2 offset s6 este3">
-        <h5 class="white-text">CS:GO</h5>
+        <h5 class="white-text">OW</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="CSGO.php">CS:GO</a></li>
-          <li><a class="grey-text text-lighten-3" href="CSGO_Players.php">CS:GO Players</a></li>
-          <li><a class="grey-text text-lighten-3" href="CSGO_Teams.php">CS:GO Teams</a></li>
-          <li><a class="grey-text text-lighten-3" href="CSGO_Tournaments.php">CS:GO Tournaments</a></li>
+          <li><a class="grey-text text-lighten-3" href="OW.php">OW</a></li>
+          <li><a class="grey-text text-lighten-3" href="OW_Players.php">OW Players</a></li>
+          <li><a class="grey-text text-lighten-3" href="OW_Teams.php">OW Teams</a></li>
+          <li><a class="grey-text text-lighten-3" href="OW_Tournaments.php">OW Tournaments</a></li>
         </ul>
       </div>
       <div class="col l2 s12 este4">
