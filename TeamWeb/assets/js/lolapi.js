@@ -1,6 +1,7 @@
 $(document).ready(function() {
   console.log("hola");
   var key = "RGAPI-c20d6c16-b5f3-495c-b9e4-b87cfa6e8993";
+  var names = [];
   var id;
   var id1,id2,id3,img1,img2,img3;
   $.getJSON("assets/js/query.php", function(data) {
@@ -10,6 +11,7 @@ $(document).ready(function() {
       console.log(names);
     });
   }).done(function(){//sql query done
+    names.forEach(function(item){
       $.ajax({
         url: "https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + item + "?api_key=" + key,
       }).done(function(data) {
@@ -40,6 +42,7 @@ $(document).ready(function() {
           });
         });
       });
+    });//names forEach
 
   });
 

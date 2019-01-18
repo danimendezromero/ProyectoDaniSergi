@@ -65,15 +65,32 @@ if (isset($_POST['login_user'])) {
   	$query = "SELECT * FROM usuario WHERE nickname='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
-      $row = $results->fetch_assoc();
-      $_SESSION['userid'] = $row["id_usuario"];
   	  $_SESSION['username'] = $username;
-  	  header('location: Home.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}
   }
 }
+
+// Edit profile
+if (isset($_POST['edit_profile'])) {
+  // receive all input values from the form
+  $ow_nick = mysqli_real_escape_string($db, $_POST['ow_nick']);
+  $lol_nick = mysqli_real_escape_string($db, $_POST['lol_nick']);
+  $ow_region = mysqli_real_escape_string($db, $_POST['ow_region']);
+  $lol_region = mysqli_real_escape_string($db, $_POST['lol_region']);
+  $languages = mysqli_real_escape_string($db, $_POST['languages']);
+
+
+  // edit profile
+
+  	$query = "INSERT INTO usuario (ow_nickname, lol_nickname, ow_region, lol_region, idioma)
+  			  VALUES('$ow_nick', '$lol_nick', '$ow_region', '$lol_region', '$ow_region', '$languages')";
+  	mysqli_query($db, $query);
+  	header('location: Profile.php');
+
+}
+
 // LOGOUT USER
 if (isset($_GET['logout'])) {
   	session_destroy();
