@@ -22,9 +22,11 @@
                 <div class="col s4 m4 buscarm">
                   <a class="waves-effect waves-light btn blue buscarm">Buscar</a>
                   <?php
+
                     if(!empty($_SESSION["username"])){
-                      echo "<li class='mobilperfil'><a href='Profile.php' class='waves-effect waves-light btn blue'>Aqui  Perfil</a></li>";
-                    }else {
+                      $id = $_SESSION["userid"];
+                      var_dump($id);
+                      echo "<li class='mobilperfil'><a href='Profile.php?user=".$id."' class='waves-effect waves-light btn blue'>Aqui  Perfil</a></li>";
                     }
                   ?>
                 </div>

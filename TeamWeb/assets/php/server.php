@@ -65,6 +65,8 @@ if (isset($_POST['login_user'])) {
   	$query = "SELECT * FROM usuario WHERE nickname='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
+      $row = $results->fetch_assoc();
+      $_SESSION['userid'] = $row["id_usuario"];
   	  $_SESSION['username'] = $username;
   	  header('location: Home.php');
   	}else {
