@@ -23,7 +23,8 @@
                   <a class="waves-effect waves-light btn blue buscarm">Buscar</a>
                   <?php
                     if(!empty($_SESSION["username"])){
-                      echo "<li class='mobilperfil'><a href='Profile.php' class='waves-effect waves-light btn blue'>Aqui  Perfil</a></li>";
+                      $id = $_SESSION["userid"];
+                      echo "<li class='mobilperfil'><a href='Profile.php?user=".$id."' class='waves-effect waves-light btn blue'>Aqui  Perfil</a></li>";
                     }else {
                     }
                   ?>
@@ -53,7 +54,8 @@
         <li><a id="buscar" class="waves-effect waves-light btn blue">Buscar</a></li>
         <?php
           if(!empty($_SESSION["username"])){
-            echo "<li id='profilenav'><a href='Profile.php' class='waves-effect waves-light btn blue'>Aqui  Perfil</a></li>";
+            $id = $_SESSION["userid"];
+            echo "<li id='profilenav'><a href='Profile.php?user=".$id."' class='waves-effect waves-light btn blue'>Aqui  Perfil</a></li>";
           }else {
             echo "<li class='login'><a href='Login.php' class='waves-effect waves-dark btn white black-text'>Log-in</a></li>";
             echo "<li ><a href='Register.php' class='waves-effect waves-light btn blue'>Register</a></li>";

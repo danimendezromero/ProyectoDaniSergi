@@ -25,7 +25,6 @@
     	<p> <a href="Home.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 
-
     <!-- ========== End of Content ============== -->
     <?php include('assets/php/footer.php') ?>
   </body>

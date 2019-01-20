@@ -45,7 +45,6 @@ if (isset($_POST['reg_user'])) {
   	$query = "INSERT INTO usuario (nickname, email, password)
   			  VALUES('$username', '$email', '$password')";
   	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
   	header('location: Login.php');
   }
 }
@@ -65,7 +64,10 @@ if (isset($_POST['login_user'])) {
   	$query = "SELECT * FROM usuario WHERE nickname='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
+      $row = $results->fetch_assoc();
+      $_SESSION['userid'] = $row["id_usuario"];
   	  $_SESSION['username'] = $username;
+      header('location: Home.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}
@@ -97,5 +99,7 @@ if (isset($_GET['logout'])) {
   	unset($_SESSION['username']);
   	header('location: Home.php');
   }
+
+
 
 ?>
