@@ -22,14 +22,14 @@
 
 <body>
 <?php include('assets/php/navbar.php') ?>
+<?php include('assets/php/server.php') ?>
   <!-- ========== Start of Content ============== -->
 
   <div class="container" >
     <div class="row perfil">
       <div class="card blue offset-l1 col l3">
         <div class="card green offset-m1 col m10 fotoperfil">
-
-
+          <!--<img src="/intranet/uploads/<?php echo $ruta_img; ?>" alt="" /> -->
         </div>
         <p id="nickname" class="grey-text text-lighten-3 center textoprin">Mofitex</p>
         <p class="grey-text text-lighten-3 center textoprin">19 y/o</p>
@@ -44,7 +44,7 @@
         <p class="textotitulo">OW server region</p>
         <p class="textoclas">EU monos</p>
         <div class="center" style="margin-bottom:8%">
-          <li ><a href='EditProfile.php' class='waves-effect waves-light btn blue'>Edit Profile</a></li>
+          <li style="list-style:none"><a href='EditProfile.php' class='waves-effect waves-light btn blue'>Edit Profile</a></li>
         </div>
 
 
@@ -65,7 +65,7 @@
                   <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
                       <span class="card-title">Top 3 champs</span>
-                      <img id="lolimg1" style="margin-left:10%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
+                      <img id="lolimg1" style="margin-left:8%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
                       <img id="lolimg2" style="margin-left:5%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
                       <img id="lolimg3" style="margin-left:5%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
                     </div>
@@ -78,24 +78,24 @@
                   <div class="card blue-grey darken-1">
                     <div class="card-content white-text"  style="height:180px;">
                       <span class="card-title">Statics</span>
-                          <div style="float:left;padding-left:5%" class="center">
-                          <img src="assets/img/winrate.png"  alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
+                          <div style="float:left;padding-left:3%" class="center">
+                          <img src="assets/img/winrate.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
                           <br><span id="lolwinrate">Win%</span>
                           </div>
                           <div style="float:left;padding-left:8%" class="center">
-                          <img src="assets/img/probar.png" alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
+                          <img src="assets/img/probar.png" alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
                           <br><span id="lolplayed">Matches played</span>
                           </div>
                           <div style="float:left;padding-left:8%" class="center">
-                          <img src="assets/img/kd.png"  alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
+                          <img src="assets/img/kd.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
                           <br><span id="lolkda">K/D</span>
                           </div>
                           <div style="float:left;padding-left:8%" class="center">
-                          <img src="assets/img/killass.png" alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
+                          <img src="assets/img/killass.png" alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
                           <br><span id="lolkp">Participation</span>
                           </div>
                           <div style="float:left;padding-left:8%" class="center">
-                          <img src="assets/img/probar.png"  alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
+                          <img src="assets/img/probar.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
                           <br><span id="lolrank">Ranking</span>
                           </div>
                     </div>
@@ -108,7 +108,7 @@
               <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                   <span class="card-title">Top 3 heroes</span>
-                  <img style="margin-left:10%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
+                  <img style="margin-left:8%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
                   <img style="margin-left:5%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
                   <img style="margin-left:5%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
                 </div>
@@ -121,24 +121,24 @@
               <div class="card blue-grey darken-1">
                 <div class="card-content white-text"  style="height:180px;">
                   <span class="card-title">Statics</span>
-                      <div style="float:left;padding-left:5%" class="center">
-                      <img style="" src="assets/img/winrate.png"  alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
+                      <div style="float:left;padding-left:3%" class="center">
+                      <img style="" src="assets/img/winrate.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
                       <br><span >Win%</span>
                       </div>
                       <div style="float:left;padding-left:8%" class="center">
-                      <img  src="assets/img/probar.png" alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
+                      <img  src="assets/img/probar.png" alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
                       <br><span >Matches played</span>
                       </div>
                       <div style="float:left;padding-left:8%" class="center">
-                      <img  src="assets/img/kd.png"  alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
+                      <img  src="assets/img/kd.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
                       <br><span >K/D</span>
                       </div>
                       <div style="float:left;padding-left:8%" class="center">
-                      <img  src="assets/img/killass.png" alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
-                        <br><span >Healing</span>
+                      <img  src="assets/img/killass.png" alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
+                        <br><span >Healing/game</span>
                       </div>
                       <div style="float:left;padding-left:8%" class="center">
-                      <img  src="assets/img/probar.png"  alt="Este es el ejemplo de un texto alternativo" width="50" height="50">
+                      <img  src="assets/img/probar.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
                       <br><span >Ranking</span>
                       </div>
                 </div>

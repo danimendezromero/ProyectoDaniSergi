@@ -77,17 +77,41 @@ if (isset($_POST['login_user'])) {
 // Edit profile
 if (isset($_POST['edit_profile'])) {
   // receive all input values from the form
+
+  $id= $_SESSION['userid'];
+
+  $nombre_img = $_FILES['imagen']['name'];
+  $tipo = $_FILES['imagen']['type'];
+  $tamano = $_FILES['imagen']['size'];
+
   $ow_nick = mysqli_real_escape_string($db, $_POST['ow_nick']);
   $lol_nick = mysqli_real_escape_string($db, $_POST['lol_nick']);
   $ow_region = mysqli_real_escape_string($db, $_POST['ow_region']);
   $lol_region = mysqli_real_escape_string($db, $_POST['lol_region']);
   $languages = mysqli_real_escape_string($db, $_POST['languages']);
 
+  if (($nombre_img == !NULL) && ($_FILES['imagen']['size'] <= 200000)){
+   if (($_FILES["imagen"]["type"] == "image/gif")
+   || ($_FILES["imagen"]["type"] == "image/jpeg")
+   || ($_FILES["imagen"]["type"] == "image/jpg")
+   || ($_FILES["imagen"]["type"] == "image/png"))
+   {
+      $directorio = $_SERVER['DOCUMENT_ROOT'].'/intranet/uploads/';
+      move_uploaded_file($_FILES['imagen']['tmp_name'],$directorio.$nombre_img);
+    }
+    else {
+       echo "No se puede subir una imagen con ese formato ";
+    }
+}
+else{
+   if($nombre_img == !NULL) echo "La imagen es demasiado grande ";
+}
 
   // edit profile
 
-  	$query = "INSERT INTO usuario (ow_nickname, lol_nickname, ow_region, lol_region, idioma)
-  			  VALUES('$ow_nick', '$lol_nick', '$ow_region', '$lol_region', '$ow_region', '$languages')";
+  	$query = "UPDATE `usuario` SET `ruta_imagen`='$nombre_img', `idioma`='$languages',`ow_nickname`='$ow_nick',`lol_nickname`='$lol_nick',`ow_region`='$ow_region',`lol_region`='$lol_region' WHERE `id_usuario`=$id";
+
+
   	mysqli_query($db, $query);
   	header('location: Profile.php');
 
@@ -99,6 +123,15 @@ if (isset($_GET['logout'])) {
   	unset($_SESSION['username']);
   	header('location: Home.php');
   }
+
+//foto perfil
+//$idfoto= $_SESSION['userid'];
+//$query1 = "SELECT ruta_imagen FROM usuarios WHERE id_usuario='$idfoto'";
+//$result1 = mysql_query($db, $query);
+//while ($row=mysql_fetch_array($result)){
+    //$ruta_img = $row["ruta_imagen"];
+//}
+
 
 
 

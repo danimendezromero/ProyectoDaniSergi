@@ -31,34 +31,47 @@
            <span class="card-title">Edit Profile</span>
            <div class="row">
              <div class="input-field col s10">
-               <input id="ow_nick" type="text" class="validate" name="username" autocomplete="off">
+               <input id="ow_nick" type="text" class="validate" name="ow_nick" autocomplete="off">
                <label for="ow_nick">OW_Nickname</label>
              </div>
            </div>
            <div class="row">
              <div class="input-field col s10">
-               <input id="lol_nick" type="text" class="validate" name="username" autocomplete="off">
+               <input id="lol_nick" type="text" class="validate" name="lol_nick" autocomplete="off">
                <label for="lol_nick">LOL_Nickname</label>
              </div>
            </div>
            <div class="row">
              <div class="input-field col s10">
-               <input id="lol_region" type="text" class="validate" name="username" autocomplete="off">
+               <input id="lol_region" type="text" class="validate" name="lol_region" autocomplete="off">
                <label for="lol_region">LOL_Region</label>
              </div>
            </div>
            <div class="row">
              <div class="input-field col s10">
-               <input id="ow_region" type="text" class="validate" name="username" autocomplete="off">
+               <input id="ow_region" type="text" class="validate" name="ow_region" autocomplete="off">
                <label for="ow_region">OW_Region</label>
              </div>
            </div>
            <div class="row">
              <div class="input-field col s10">
-               <input id="languages" type="text" class="validate" name="username" autocomplete="off">
+               <input id="languages" type="text" class="validate" name="languages" autocomplete="off">
                <label for="languages">Languages</label>
              </div>
            </div>
+
+
+          <div class="file-field input-field">
+            <div class="btn">
+              <span for="imagen">File</span>
+              <input id="imagen" name="imagen" size="130" type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+
+
            <div class="center">
              <button type="submit" class="waves-effect waves-light btn" name="edit_profile">Complete edit</button>
            </div>
