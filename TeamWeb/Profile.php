@@ -22,14 +22,12 @@
 
 <body>
 <?php include('assets/php/navbar.php') ?>
-<?php include('assets/php/server.php') ?>
   <!-- ========== Start of Content ============== -->
 
   <div class="container" >
     <div class="row perfil">
       <div class="card blue offset-l1 col l3">
         <div class="card green offset-m1 col m10 fotoperfil">
-          <!--<img src="/intranet/uploads/<?php echo $ruta_img; ?>" alt="" /> -->
         </div>
         <p id="nickname" class="grey-text text-lighten-3 center textoprin">Mofitex</p>
         <p class="grey-text text-lighten-3 center textoprin">19 y/o</p>
