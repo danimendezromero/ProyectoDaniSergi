@@ -89,27 +89,14 @@ if (isset($_POST['edit_profile'])) {
   $ow_region = mysqli_real_escape_string($db, $_POST['ow_region']);
   $lol_region = mysqli_real_escape_string($db, $_POST['lol_region']);
   $languages = mysqli_real_escape_string($db, $_POST['languages']);
+  $code = mysqli_real_escape_string($db, $_POST['ow_code']);
+  $plataforma = mysqli_real_escape_string($db, $_POST['ow_plataforma']);
 
-  if (($nombre_img == !NULL) && ($_FILES['imagen']['size'] <= 200000)){
-   if (($_FILES["imagen"]["type"] == "image/gif")
-   || ($_FILES["imagen"]["type"] == "image/jpeg")
-   || ($_FILES["imagen"]["type"] == "image/jpg")
-   || ($_FILES["imagen"]["type"] == "image/png"))
-   {
-      $directorio = $_SERVER['DOCUMENT_ROOT'].'/intranet/uploads/';
-      move_uploaded_file($_FILES['imagen']['tmp_name'],$directorio.$nombre_img);
-    }
-    else {
-       echo "No se puede subir una imagen con ese formato ";
-    }
-}
-else{
-   if($nombre_img == !NULL) echo "La imagen es demasiado grande ";
-}
+
 
   // edit profile
 
-  	$query = "UPDATE `usuario` SET `ruta_imagen`='$nombre_img', `idioma`='$languages',`ow_nickname`='$ow_nick',`lol_nickname`='$lol_nick',`ow_region`='$ow_region',`lol_region`='$lol_region' WHERE `id_usuario`=$id";
+  	$query = "UPDATE `usuario` SET `idioma`='$languages',`ow_nickname`='$ow_nick',`lol_nickname`='$lol_nick',`ow_region`='$ow_region',`lol_region`='$lol_region',`ow_code`='$code',`ow_plataforma`='$plataforma' WHERE `id_usuario`=$id";
 
 
   	mysqli_query($db, $query);

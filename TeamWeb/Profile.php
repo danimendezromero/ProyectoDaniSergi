@@ -17,6 +17,7 @@
   <script type="text/javascript" src="assets/js/materialize.min.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
   <script type="text/javascript" src="assets/js/perfilapi.js"></script>
+  <script type="text/javascript" src="assets/js/rellenarperfil.js"></script>
   <title>Profile</title>
 </head>
 
@@ -32,15 +33,19 @@
         <p id="nickname" class="grey-text text-lighten-3 center textoprin">Mofitex</p>
         <p class="grey-text text-lighten-3 center textoprin">19 y/o</p>
         <p class="textotitulo">Languages</p>
-        <p class="textoclas">EN, ES</p>
+        <p id="languages" class="textoclas"></p>
         <p class="textotitulo">OW Nickname</p>
-        <p class="textoclas">Morfitex</p>
+        <p id="ownick" class="textoclas"></p>
         <p class="textotitulo">LOL Nickname</p>
         <p id="lolnick" class="textoclas"></p>
         <p class="textotitulo">Lol server region</p>
         <p id="lolregion" class="textoclas"></p>
         <p class="textotitulo">OW server region</p>
-        <p class="textoclas">EU monos</p>
+        <p id="owregion" class="textoclas"></p>
+        <p class="textotitulo">OW code</p>
+        <p id="owcode" class="textoclas"></p>
+        <p class="textotitulo">OW plataforma</p>
+        <p id="owplat" class="textoclas"></p>
         <div class="center" style="margin-bottom:8%">
           <li style="list-style:none"><a href='EditProfile.php' class='waves-effect waves-light btn blue'>Edit Profile</a></li>
         </div>

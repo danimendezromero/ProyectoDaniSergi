@@ -37,6 +37,12 @@
            </div>
            <div class="row">
              <div class="input-field col s10">
+               <input id="ow_code" type="text" class="validate" name="ow_code" autocomplete="off">
+               <label for="ow_code">OW_Code</label>
+             </div>
+           </div>
+           <div class="row">
+             <div class="input-field col s10">
                <input id="lol_nick" type="text" class="validate" name="lol_nick" autocomplete="off">
                <label for="lol_nick">LOL_Nickname</label>
              </div>
@@ -51,6 +57,12 @@
              <div class="input-field col s10">
                <input id="ow_region" type="text" class="validate" name="ow_region" autocomplete="off">
                <label for="ow_region">OW_Region</label>
+             </div>
+           </div>
+           <div class="row">
+             <div class="input-field col s10">
+               <input id="ow_plataforma" type="text" class="validate" name="ow_plataforma" autocomplete="off">
+               <label for="ow_plataforma">OW_Plataforma</label>
              </div>
            </div>
            <div class="row">
