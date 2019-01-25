@@ -1,7 +1,7 @@
 <?php
 $name = $_get["id"];
 $conn = new mysqli('localhost', 'root', '', 'teamweb');
-$sql = "SELECT lol_nickname FROM usuario WHERE id_usuario=$name";
+$sql = "SELECT * FROM usuario WHERE id_usuario=$name";
 $result = $conn->query($sql);
 $to_encode = array();
 

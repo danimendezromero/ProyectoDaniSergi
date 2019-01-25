@@ -1,6 +1,6 @@
 $(document).ready(function() {
   //variables
-  var key = "RGAPI-e82a4991-ea48-4067-8bfc-f9dedcf610f5";
+  var key = "RGAPI-6137a842-bda8-45e6-9ea9-f2a4a423e6aa";
   var url = new URL(window.location.href);
   var userid = url.searchParams.get("user");
   var id1,id2,id3,img1,img2,img3,name,id,accountid,partID,team;

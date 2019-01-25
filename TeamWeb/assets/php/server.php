@@ -80,10 +80,6 @@ if (isset($_POST['edit_profile'])) {
 
   $id= $_SESSION['userid'];
 
-  $nombre_img = $_FILES['imagen']['name'];
-  $tipo = $_FILES['imagen']['type'];
-  $tamano = $_FILES['imagen']['size'];
-
   $ow_nick = mysqli_real_escape_string($db, $_POST['ow_nick']);
   $lol_nick = mysqli_real_escape_string($db, $_POST['lol_nick']);
   $ow_region = mysqli_real_escape_string($db, $_POST['ow_region']);
@@ -100,7 +96,7 @@ if (isset($_POST['edit_profile'])) {
 
 
   	mysqli_query($db, $query);
-  	header('location: Profile.php');
+  	header('location: Profile.php?user=' . $id);
 
 }
 

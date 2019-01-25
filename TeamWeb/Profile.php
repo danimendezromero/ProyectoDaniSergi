@@ -17,6 +17,7 @@
   <script type="text/javascript" src="assets/js/materialize.min.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
   <script type="text/javascript" src="assets/js/perfilapi.js"></script>
+  <script type="text/javascript" src="assets/js/perfilapiow.js"></script>
   <script type="text/javascript" src="assets/js/rellenarperfil.js"></script>
   <title>Profile</title>
 </head>
@@ -68,9 +69,9 @@
                   <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
                       <span class="card-title">Top 3 champs</span>
-                      <img id="lolimg1" style="margin-left:8%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
-                      <img id="lolimg2" style="margin-left:5%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
-                      <img id="lolimg3" style="margin-left:5%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
+                      <img class="circle" id="lolimg1" style="margin-left:8%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
+                      <img class="circle" id="lolimg2" style="margin-left:5%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
+                      <img class="circle" id="lolimg3" style="margin-left:5%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
                     </div>
                   </div>
                 </div>
@@ -83,7 +84,7 @@
                       <span class="card-title">Statics</span>
                           <div style="float:left;padding-left:3%" class="center">
                           <img src="assets/img/winrate.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
-                          <br><span id="lolwinrate">Win%</span>
+                          <br><span id="lolwinrate">WinRate</span>
                           </div>
                           <div style="float:left;padding-left:8%" class="center">
                           <img src="assets/img/probar.png" alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
@@ -111,9 +112,9 @@
               <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                   <span class="card-title">Top 3 heroes</span>
-                  <img style="margin-left:8%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
-                  <img style="margin-left:5%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
-                  <img style="margin-left:5%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
+                  <img class="circle" id="owimg1" style="margin-left:8%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
+                  <img class="circle" id="owimg2" style="margin-left:5%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
+                  <img class="circle" id="owimg3" style="margin-left:5%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
                 </div>
               </div>
             </div>
@@ -126,23 +127,23 @@
                   <span class="card-title">Statics</span>
                       <div style="float:left;padding-left:3%" class="center">
                       <img style="" src="assets/img/winrate.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
-                      <br><span >Win%</span>
+                      <br><span id="owwinrate">WinRate</span>
                       </div>
                       <div style="float:left;padding-left:8%" class="center">
                       <img  src="assets/img/probar.png" alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
-                      <br><span >Matches played</span>
+                      <br><span id="owplayed">Matches played</span>
                       </div>
                       <div style="float:left;padding-left:8%" class="center">
                       <img  src="assets/img/kd.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
-                      <br><span >K/D</span>
+                      <br><span id="owkda">K/D</span>
                       </div>
                       <div style="float:left;padding-left:8%" class="center">
                       <img  src="assets/img/killass.png" alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
-                        <br><span >Healing/game</span>
+                      <br><span id="healing">HealingDone</span>
                       </div>
                       <div style="float:left;padding-left:8%" class="center">
                       <img  src="assets/img/probar.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
-                      <br><span >Ranking</span>
+                      <br><span id="owrank">TRN:</span>
                       </div>
                 </div>
               </div>
