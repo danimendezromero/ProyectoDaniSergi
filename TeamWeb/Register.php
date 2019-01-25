@@ -31,13 +31,13 @@
            <span class="card-title">Register</span>
            <?php include('assets/php/errors.php'); ?>
            <div class="row">
-             <div class="input-field col s10">
+             <div class="input-field col s10" style="margin-bottom:-15px">
                <input id="username" type="text" class="validate" name="username" autocomplete="off">
                <label for="username">Username*</label>
              </div>
            </div>
            <div class="row">
-             <div class="input-field col s10">
+             <div class="input-field col s10" style="margin-bottom:-15px">
                <input id="email" type="email" class="validate" name="email" autocomplete="off">
                <label for="email">Email*</label>
              </div>
@@ -48,7 +48,7 @@
                <label for="password">Password*</label>
              </div>
            </div>
-           <div class="file-field input-field">
+           <div class="file-field input-field" style="margin-bottom:30px">
              <div class="btn">
                <span>File</span>
                <input type="file" name="fileToUpload" id="fileToUpload">
@@ -57,10 +57,8 @@
                <input class="file-path validate" type="text">
              </div>
            </div>
-           <p style="color:#9e9e9e;">* :Required fields</p>
-         </div>
-         <div class="card-action">
-           <p>
+
+           <p style="margin-bottom:10px">
              <label>
                <input type="checkbox" class="filled-in" />
                <span style="font-size: 13px;">
@@ -73,9 +71,12 @@
                <span style="font-size: 13px;">I Agree to the Terms of Use & Privacy Policy</span>
              </label>
              </p>
-             <button type="submit" class="waves-effect waves-light btn" style="margin-left:37%; margin-top:10px;" name="reg_user">Register</button>
-           <p class="f1" style="text-align:center">If you already have an account click <a href="">Log In</a></p>
+             <button type="submit" class="waves-effect waves-light btn" style="margin-left:37%; margin-top:20px; margin-bottom:20px; " name="reg_user">Register</button>
+           <p class="f1" style="text-align:center">If you already have an account click <a href="login.php">Log In</a></p>
          </div>
+
+
+
        </div>
      </form>
      </div>

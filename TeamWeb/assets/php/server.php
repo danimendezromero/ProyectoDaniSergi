@@ -100,6 +100,7 @@ if (isset($_POST['edit_profile'])) {
 
 }
 
+
 // LOGOUT USER
 if (isset($_GET['logout'])) {
   	session_destroy();

@@ -63,9 +63,8 @@
         </div>
 
       </div>
-      <div class="card-action">
-
-        <a class="waves-effect waves-light btn" style="margin-left:37%; margin-top:10px;margin-bottom:10px;">Create Team</a>
+      <div class="center">
+        <button type="submit" class="waves-effect waves-light btn" name="create_team">Create Team</button>
       </div>
     </div>
   </div>
