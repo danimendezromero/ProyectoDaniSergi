@@ -1,6 +1,6 @@
 $(document).ready(function() {
   //variables
-  var key = "RGAPI-6137a842-bda8-45e6-9ea9-f2a4a423e6aa";
+  var key = "RGAPI-56504771-317c-4020-91ea-52800c21f012";
   var url = new URL(window.location.href);
   var userid = url.searchParams.get("user");
   var id1,id2,id3,img1,img2,img3,name,id,accountid,partID,team;
@@ -59,7 +59,7 @@ $(document).ready(function() {
                   winrate = Math.floor((item.wins /(item.wins+item.losses))*1000)/10;
                   $("#lolwinrate").append("<br>"+winrate+"%");
                   $("#lolplayed").append("<br>"+(item.wins+item.losses));
-                  $("#lolrank").append("<br>"+item.tier+" "+item.rank);
+                  $("#lolrank").append("<br>"+item.tier.toLowerCase()+" "+item.rank);
                 }
               });
             });

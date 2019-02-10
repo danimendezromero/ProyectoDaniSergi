@@ -21,8 +21,15 @@ $(document).ready(function() {
       $("#owregion").html(owserv);
       $("#owcode").html(owcode);
       $("#owplat").html(owplat);
+
+      $("#miputamadre").html(languages);
+      $("#nose").attr("value",languages);
+      $("#ow_nick").attr("value",ownick);
+      $("#lol_nick").attr("value",lolnick);
+      $("#lol_region").attr("value",lolserv);
+      $("#ow_region").attr("value",owserv);
+      $("#ow_code").attr("value",owcode);
+      $("#ow_plataforma").attr("value",owplat);
     }
   })
-
-
 });

@@ -25,9 +25,7 @@
     	<p> <a href="Home.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 
-    <div class="center" style="margin-bottom:8%">
-      <li style="list-style:none"><a href='Group_Register.php' class='waves-effect waves-light btn blue'>Group Register</a></li>
-    </div>
+  
 
     <!-- ========== End of Content ============== -->
     <?php include('assets/php/footer.php') ?>

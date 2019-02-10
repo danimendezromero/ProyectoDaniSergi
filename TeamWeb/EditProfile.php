@@ -17,6 +17,7 @@
   <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="assets/js/materialize.min.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/rellenarperfil.js"></script>
   <title>Register</title>
 </head>
 <body>
@@ -30,45 +31,45 @@
          <div class="card-content white-text">
            <span class="card-title">Edit Profile</span>
            <div class="row">
-             <div class="input-field col s10">
+             <label class="left" style="margin-left:10px;">OW_Nickname</label><br>
+             <div class="input-field col s10" style="margin-top: -5px">
                <input id="ow_nick" type="text" class="validate" name="ow_nick" autocomplete="off">
-               <label for="ow_nick">OW_Nickname</label>
              </div>
            </div>
            <div class="row">
-             <div class="input-field col s10">
+             <label class="left" style="margin-left:10px;">OW_Code</label><br>
+             <div class="input-field col s10" style="margin-top: -5px">
                <input id="ow_code" type="text" class="validate" name="ow_code" autocomplete="off">
-               <label for="ow_code">OW_Code</label>
              </div>
            </div>
            <div class="row">
-             <div class="input-field col s10">
+             <label class="left" style="margin-left:10px;">LOL_Nickname</label><br>
+             <div class="input-field col s10" style="margin-top: -5px">
                <input id="lol_nick" type="text" class="validate" name="lol_nick" autocomplete="off">
-               <label for="lol_nick">LOL_Nickname</label>
              </div>
            </div>
            <div class="row">
-             <div class="input-field col s10">
+             <label class="left" style="margin-left:10px;">LOL_Region</label><br>
+             <div class="input-field col s10" style="margin-top: -5px">
                <input id="lol_region" type="text" class="validate" name="lol_region" autocomplete="off">
-               <label for="lol_region">LOL_Region</label>
              </div>
            </div>
            <div class="row">
-             <div class="input-field col s10">
+             <label class="left" style="margin-left:10px;">OW_Region</label><br>
+             <div class="input-field col s10" style="margin-top: -5px">
                <input id="ow_region" type="text" class="validate" name="ow_region" autocomplete="off">
-               <label for="ow_region">OW_Region</label>
              </div>
            </div>
            <div class="row">
-             <div class="input-field col s10">
+             <label class="left" style="margin-left:10px;">OW_Plataforma</label><br>
+             <div class="input-field col s10" style="margin-top: -5px">
                <input id="ow_plataforma" type="text" class="validate" name="ow_plataforma" autocomplete="off">
-               <label for="ow_plataforma">OW_Plataforma</label>
              </div>
            </div>
            <div class="row">
-             <div class="input-field col s10">
-               <input id="languages" type="text" class="validate" name="languages" autocomplete="off">
-               <label for="languages">Languages</label>
+             <label class="left" style="margin-left:10px;">Languages</label> <br>
+             <div class="input-field col s10" style="margin-top: -5px">
+               <input id="languages" type="text" class="validate" name="languages" autocomplete="off" >
              </div>
            </div>
 
@@ -82,11 +83,16 @@
               <input class="file-path validate" type="text">
             </div>
           </div>
+          <div id="miputamadre">
+            asdsad
+          </div>
 
 
            <div class="center">
              <button type="submit" class="waves-effect waves-light btn" name="edit_profile">Complete edit</button>
            </div>
+
+           <input type="text" id="nose" name="" value="">
 
          </div>
 

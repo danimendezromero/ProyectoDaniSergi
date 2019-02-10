@@ -29,7 +29,8 @@
   <div class="container" >
     <div class="row perfil">
       <div class="card blue offset-l1 col l3">
-        <div class="card green offset-m1 col m10 fotoperfil">
+        <div class="center" style="padding-top:20px;">
+          <img class="circle" id="fotoperfil" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="150" height="150">
         </div>
         <p id="nickname" class="grey-text text-lighten-3 center textoprin">Mofitex</p>
         <p class="grey-text text-lighten-3 center textoprin">19 y/o</p>
@@ -52,10 +53,10 @@
         </div>
 
 
-      </div>
+        </div>
 
-      <div class="card red col l7 ">
-        <div class="row">
+        <div class="card red col l7 ">
+          <div class="row">
           <div class="col s12">
             <ul class="tabs red tabb1">
                 <li class="tab col s3"><a href="#test1" class="active white-text">LOL</a></li>
@@ -143,7 +144,7 @@
                       </div>
                       <div style="float:left;padding-left:8%" class="center">
                       <img  src="assets/img/probar.png"  alt="Este es el ejemplo de un texto alternativo" width="40" height="40">
-                      <br><span id="owrank">TRN:</span>
+                      <br><span id="owrank">TRN</span>
                       </div>
                 </div>
               </div>

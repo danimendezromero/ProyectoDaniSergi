@@ -2,11 +2,18 @@
 <?php include_once('assets/php/server.php') ?>
 <ul id="jugadores" class="dropdown-content">
   <li><a href="LOL_Players.php" class="black-text">LOL</a></li>
-  <li><a href="CSGO_Players.php" class="black-text">CS:GO</a></li>
+  <li><a href="OW_Players.php" class="black-text">OW</a></li>
 </ul>
 <ul id="equipos" class="dropdown-content">
   <li><a href="LOL_Teams.php" class="black-text">LOL</a></li>
-  <li><a href="CSGO_Teams.php" class="black-text">CS:GO</a></li>
+  <li><a href="OW_Teams.php" class="black-text">OW</a></li>
+  <?php
+    if(!empty($_SESSION["username"])){
+      $id = $_SESSION["userid"];
+      echo "<li id=''><a href='Group_Register.php?user=".$id."' class='black-text'>Create Group</a></li>";
+    }else {
+    }
+  ?>
 </ul>
 <nav class="white">
   <div class="nav-wrapper hide-on-large-only">
@@ -77,7 +84,7 @@
         <div class="collapsible-body">
           <ul>
             <li><a href="LOL_Players.php" class="black-text">LOL</a></li>
-            <li><a href="CSGO_Players.php" class="black-text">CS:GO</a></li>
+            <li><a href="OW_Players.php" class="black-text">OW</a></li>
           </ul>
         </div>
       </li>
@@ -90,7 +97,9 @@
         <div class="collapsible-body">
           <ul>
             <li><a href="LOL_Teams.php" class="black-text">LOL</a></li>
-            <li><a href="CSGO_Teams.php" class="black-text">CS:GO</a></li>
+            <li><a href="OW_Teams.php" class="black-text">na</a></li>
+
+
           </ul>
         </div>
       </li>

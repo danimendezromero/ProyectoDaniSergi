@@ -15,6 +15,7 @@ if (isset($_POST['reg_user'])) {
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
+  $fecha=date("Y/m/d");
 
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
@@ -42,8 +43,8 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$password = md5($password);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO usuario (nickname, email, password)
-  			  VALUES('$username', '$email', '$password')";
+  	$query = "INSERT INTO usuario (nickname, email, password, fecha_creacion)
+  			  VALUES('$username', '$email', '$password', '$fecha')";
   	mysqli_query($db, $query);
   	header('location: Login.php');
   }
@@ -97,6 +98,27 @@ if (isset($_POST['edit_profile'])) {
 
   	mysqli_query($db, $query);
   	header('location: Profile.php?user=' . $id);
+
+}
+
+// Group register
+if (isset($_POST['create_team'])) {
+  // receive all input values from the form
+
+  $fecha=date("Y/m/d");
+  $id= $_SESSION['userid'];
+
+  $name = mysqli_real_escape_string($db, $_POST['nombre']);
+  $region = mysqli_real_escape_string($db, $_POST['region']);
+
+
+  // edit profile
+
+  	$query = "INSERT INTO equipo (nombre,fechacreacion,idioma,creador)
+    VALUES('$name','$fecha','$region','$id')";
+
+  	mysqli_query($db, $query);
+  	header('location: home.php?user=' . $id);
 
 }
 
