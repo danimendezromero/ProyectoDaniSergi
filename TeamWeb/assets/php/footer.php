@@ -1,5 +1,5 @@
 <!-- ========== Start Footer ============== -->
-<footer class="page-footer blue-grey darken-1">
+<footer class="page-footer blue-grey darken-3 ">
   <div class="container">
     <div class="row">
       <div class="col l2 offset s6 este1">
@@ -32,13 +32,15 @@
       <div class="col l2 s12 este4">
       </div>
       <div class="col l4 s12 este">
+        <div class="center">
         <a href="facebookpage" class="brand-logo logo1"> <img class="responsive-img logof" src="assets/img/facebook.png" alt="facebook"></a>
         <a href="twitterpage" class="brand-logo logo2"> <img class="responsive-img logof" src="assets/img/twiter.png" alt="twiter"></a>
+        </div>
       </div>
 
     </div>
   </div>
-  <div class="footer-copyright">
+  <div class="footer-copyright ">
     <div class="container foot" style="text-align:center">
       All product names, logos, and brands are the property of their respective owners. All companies, products and service names used on this website are for identification purposes only.
 

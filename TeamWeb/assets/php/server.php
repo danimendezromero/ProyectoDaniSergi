@@ -88,12 +88,13 @@ if (isset($_POST['edit_profile'])) {
   $languages = mysqli_real_escape_string($db, $_POST['languages']);
   $code = mysqli_real_escape_string($db, $_POST['ow_code']);
   $plataforma = mysqli_real_escape_string($db, $_POST['ow_plataforma']);
+  $date = mysqli_real_escape_string($db, $_POST['edad']);
 
 
 
   // edit profile
 
-  	$query = "UPDATE `usuario` SET `idioma`='$languages',`ow_nickname`='$ow_nick',`lol_nickname`='$lol_nick',`ow_region`='$ow_region',`lol_region`='$lol_region',`ow_code`='$code',`ow_plataforma`='$plataforma' WHERE `id_usuario`=$id";
+  	$query = "UPDATE `usuario` SET `idioma`='$languages',`fechanacimiento`='$date',`ow_nickname`='$ow_nick',`lol_nickname`='$lol_nick',`ow_region`='$ow_region',`lol_region`='$lol_region',`ow_code`='$code',`ow_plataforma`='$plataforma' WHERE `id_usuario`=$id";
 
 
   	mysqli_query($db, $query);

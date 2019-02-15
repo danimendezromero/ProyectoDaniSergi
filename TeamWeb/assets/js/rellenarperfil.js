@@ -13,14 +13,12 @@ $(document).ready(function() {
       lolserv = JSON.parse(result)[0].lol_region;
       owcode = JSON.parse(result)[0].ow_code;
       owplat = JSON.parse(result)[0].ow_plataforma;
-
+      
       $("#languages").html(languages);
-      $("#ownick").html(ownick);
+      $("#ownick").html(ownick + "#" +  owcode + " " + owplat.toUpperCase());
+      $("#owregion").html(owserv);
       $("#lolnick").html(lolnick);
       $("#lolregion").html(lolserv);
-      $("#owregion").html(owserv);
-      $("#owcode").html(owcode);
-      $("#owplat").html(owplat);
 
       $("#miputamadre").html(languages);
       $("#nose").attr("value",languages);

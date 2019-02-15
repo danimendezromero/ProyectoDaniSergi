@@ -23,7 +23,7 @@
     <!-- ========== Start of Content ============== -->
     <div class="row" style="padding-top:30px; Width:500px">
         <div class="col s12">
-          <div class="card blue-grey darken-1">
+          <div class="card blue-grey darken-3">
             <form method="post" action="login.php">
             <div class="card-content white-text">
               <span class="card-title">Log In</span>

@@ -28,7 +28,7 @@
 
   <div class="container" >
     <div class="row perfil">
-      <div class="card blue offset-l1 col l3">
+      <div class="card blue-grey darken-3 offset-l1 col l3 m3">
         <div class="center" style="padding-top:20px;">
           <img class="circle" id="fotoperfil" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="150" height="150">
         </div>
@@ -38,27 +38,25 @@
         <p id="languages" class="textoclas"></p>
         <p class="textotitulo">OW Nickname</p>
         <p id="ownick" class="textoclas"></p>
+        <p class="textotitulo">OW server region</p>
+        <p id="owregion" class="textoclas"></p>
         <p class="textotitulo">LOL Nickname</p>
         <p id="lolnick" class="textoclas"></p>
         <p class="textotitulo">Lol server region</p>
         <p id="lolregion" class="textoclas"></p>
-        <p class="textotitulo">OW server region</p>
-        <p id="owregion" class="textoclas"></p>
-        <p class="textotitulo">OW code</p>
-        <p id="owcode" class="textoclas"></p>
-        <p class="textotitulo">OW plataforma</p>
-        <p id="owplat" class="textoclas"></p>
-        <div class="center" style="margin-bottom:8%">
-          <li style="list-style:none"><a href='EditProfile.php' class='waves-effect waves-light btn blue'>Edit Profile</a></li>
+        <div class="center" style="margin-bottom:10%; padding-top:3%">
+          <li style="list-style:none"><a href='EditProfile.php' class='waves-effect waves-light btn blue-grey darken-2'>Edit Profile</a></li>
         </div>
 
 
         </div>
 
-        <div class="card red col l7 ">
+        <div class="card col l7 m9 backgroundd " style="-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;" >
           <div class="row">
           <div class="col s12">
-            <ul class="tabs red tabb1">
+            <ul class="tabs blue-grey darken-3 tabb1">
                 <li class="tab col s3"><a href="#test1" class="active white-text">LOL</a></li>
               <li class="tab col s3"><a href="#test2" class="white-text">OW</a></li>
             </ul>
@@ -67,7 +65,7 @@
 
               <div class="row">
                 <div class="col s12 m12">
-                  <div class="card blue-grey darken-1">
+                  <div class="card blue-grey darken-3">
                     <div class="card-content white-text">
                       <span class="card-title">Top 3 champs</span>
                       <img class="circle" id="lolimg1" style="margin-left:8%;" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
@@ -80,7 +78,7 @@
 
               <div class="row">
                 <div class="col s12 m12">
-                  <div class="card blue-grey darken-1">
+                  <div class="card blue-grey darken-3">
                     <div class="card-content white-text"  style="height:180px;">
                       <span class="card-title">Statics</span>
                           <div style="float:left;padding-left:3%" class="center">
@@ -110,7 +108,7 @@
             </div>
           <div id="test2" class="col s12"><div class="row">
             <div class="col s12 m12">
-              <div class="card blue-grey darken-1">
+              <div class="card blue-grey darken-3">
                 <div class="card-content white-text">
                   <span class="card-title">Top 3 heroes</span>
                   <img class="circle" id="owimg1" style="margin-left:8%;" src="assets/img/pruebaow.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="130" height="130">
@@ -123,7 +121,7 @@
 
           <div class="row">
             <div class="col s12 m12">
-              <div class="card blue-grey darken-1">
+              <div class="card blue-grey darken-3">
                 <div class="card-content white-text"  style="height:180px;">
                   <span class="card-title">Statics</span>
                       <div style="float:left;padding-left:3%" class="center">

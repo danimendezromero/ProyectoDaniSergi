@@ -26,7 +26,7 @@
   <div class="row" style="padding-top:30px; Width:500px">
      <div class="col s12">
        <form method="post" action="register.php" enctype="multipart/form-data">
-       <div class="card blue-grey darken-1">
+       <div class="card blue-grey darken-3">
          <div class="card-content white-text">
            <span class="card-title">Register</span>
            <?php include('assets/php/errors.php'); ?>
@@ -43,18 +43,9 @@
              </div>
            </div>
            <div class="row">
-             <div class="input-field col s10">
+             <div class="input-field col s10" >
                <input id="password" type="password" class="validate" name="password" autocomplete="off">
                <label for="password">Password*</label>
-             </div>
-           </div>
-           <div class="file-field input-field" style="margin-bottom:30px">
-             <div class="btn">
-               <span>File</span>
-               <input type="file" name="fileToUpload" id="fileToUpload">
-             </div>
-             <div class="file-path-wrapper">
-               <input class="file-path validate" type="text">
              </div>
            </div>
 

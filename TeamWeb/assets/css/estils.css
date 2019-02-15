@@ -2,7 +2,7 @@
 body, html{
   min-width: 100%;
   min-height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #546e7a;
 }
 body{
   display: flex;
@@ -21,9 +21,6 @@ li {
   .buscarm{
     margin-left: unset !important;
   }
-  #buscadorm{
-    margin-left: 25%;
-  }
 }
 @media only screen and (min-width : 990px) and (max-width : 1300px)  {
   #topbarsearch{
@@ -38,12 +35,6 @@ li {
   #registrar{
     margin-right: 1%;
   }
-  #buscar{
-    margin-left: unset;
-  }
-  #buscador{
-    margin-left: 7%;
-  }
 
 }
 @media only screen and (min-width : 1300px) and (max-width : 1500px)  {
@@ -55,12 +46,6 @@ li {
   }
   #registrar{
     margin-right: 1%;
-  }
-  #buscar{
-    margin-left: unset;
-  }
-  #buscador{
-    margin-left: 12%;
   }
   #topbarsearch{
     width: 300px;
@@ -77,12 +62,6 @@ li {
   #registrar{
     margin-right: 1%;
   }
-  #buscar{
-    margin-left: unset;
-  }
-  #buscador{
-    margin-left: 18%;
-  }
   #topbarsearch{
     width: 300px;
   }
@@ -97,12 +76,6 @@ li {
   #registrar{
     margin-right: 1%;
   }
-  #buscar{
-    margin-left: unset;
-  }
-  #buscador{
-    margin-left: 20%;
-  }
   #topbarsearch{
     width: 300px
   }
@@ -116,12 +89,6 @@ li {
   }
   #registrar{
     margin-right: 1%;
-  }
-  #buscar{
-    margin-left: unset;
-  }
-  #buscador{
-    margin-left: 20%;
   }
   #topbarsearch{
     width: 300px;
@@ -225,12 +192,12 @@ nav .divider-left, nav .divider-right{
 }
 .textoclas{
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   margin-left: 5px;
 }
 .textotitulo{
-  color: red;
-  font-size: 15px;
+  color: #91a6b4;
+  font-size: 14px;
   margin-left: 5px;
 }
 .textoprin{
@@ -238,6 +205,9 @@ nav .divider-left, nav .divider-right{
 }
 /* ========== Perfil web CSS ============== */
 /* ========== Login web CSS ============== */
+.login{
+  padding-left: 40%;
+}
 .cuadrado1{
   margin-top: -30px;
 }
@@ -245,6 +215,12 @@ nav .divider-left, nav .divider-right{
       margin-top: -10px;
 }
 /* ========== end of LOGIN web CSS ============== */
+/* ========== lolplayer web CSS ============== */
+#buscador{
+  width:30%;
+  float:left;
+}
+/* ========== end of lolplayer web CSS ============== */
 /* ========== mobilNAV web CSS ============== */
 .mobilperfil{
   padding-left:15%;
@@ -310,6 +286,11 @@ h4{
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* fondo perfil*/
+.backgroundd{
+  background-color: #546e7a;
 }
 /* sadsdsadsa*/
 .error {

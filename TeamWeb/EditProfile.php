@@ -73,6 +73,12 @@
              </div>
            </div>
 
+           <div class="row">
+             <div class="input-field col s10" style="color: #939E9E">
+               Date of birth:<input id="edad" type="date" name="cumpleanios" step="1" value="<?php echo date("Y-m-d");?>">
+             </div>
+           </div>
+
 
           <div class="file-field input-field">
             <div class="btn">
