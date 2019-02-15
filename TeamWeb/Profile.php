@@ -45,7 +45,10 @@
         <p class="textotitulo">Lol server region</p>
         <p id="lolregion" class="textoclas"></p>
         <div class="center" style="margin-bottom:10%; padding-top:3%">
-          <li style="list-style:none"><a href='EditProfile.php' class='waves-effect waves-light btn blue-grey darken-2'>Edit Profile</a></li>
+          <?php
+              $id = $_SESSION["userid"];
+              echo "<li style='list-style:none;'><a href='EditProfile.php?user=".$id."' class='waves-effect waves-light btn blue-grey darken-2'>Edit Profile</a></li>";
+          ?>
         </div>
 
 

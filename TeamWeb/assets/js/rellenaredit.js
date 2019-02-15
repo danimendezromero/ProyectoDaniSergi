@@ -15,12 +15,13 @@ $(document).ready(function() {
       owplat = JSON.parse(result)[0].ow_plataforma;
 
       console.log(lolnick);
-
-      $("#languages").html(languages);
-      $("#ownick").html(ownick + "#" +  owcode + " " + owplat.toUpperCase());
-      $("#owregion").html(owserv);
-      $("#lolnick").html(lolnick);
-      $("#lolregion").html(lolserv);
+      $("#ow_nick").attr("value",ownick);
+      $("#ow_code").attr("value",owcode);
+      $("#ow_region").attr("value",owserv);
+      $("#ow_plataforma").attr("value",owplat);
+      $("#lol_nick").attr("value",lolnick);
+      $("#lol_region").attr("value",lolserv);
+      $("#languages").attr("value",languages);
     }
   })
 });

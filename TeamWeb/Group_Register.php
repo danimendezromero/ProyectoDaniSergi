@@ -26,7 +26,7 @@
   <div class="row" style="padding-top:30px; Width:500px">
      <div class="col s12">
        <form method="post" action="register.php" enctype="multipart/form-data">
-       <div class="card blue-grey darken-1">
+       <div class="card  blue-grey darken-3">
          <div class="card-content white-text">
            <span class="card-title">Register</span>
            <?php include('assets/php/errors.php'); ?>

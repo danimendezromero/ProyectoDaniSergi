@@ -17,7 +17,7 @@
   <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="assets/js/materialize.min.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
-  <script type="text/javascript" src="assets/js/rellenarperfil.js"></script>
+  <script type="text/javascript" src="assets/js/rellenaredit.js"></script>
   <title>Register</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
   <div class="row" style="padding-top:30px; Width:500px">
      <div class="col s12">
        <form method="post" action="register.php">
-       <div class="card blue-grey darken-1">
+       <div class="card  blue-grey darken-3">
          <div class="card-content white-text">
            <span class="card-title">Edit Profile</span>
            <div class="row">
@@ -89,16 +89,9 @@
               <input class="file-path validate" type="text">
             </div>
           </div>
-          <div id="miputamadre">
-            asdsad
-          </div>
-
-
            <div class="center">
              <button type="submit" class="waves-effect waves-light btn" name="edit_profile">Complete edit</button>
            </div>
-
-           <input type="text" id="nose" name="" value="">
 
          </div>
 
