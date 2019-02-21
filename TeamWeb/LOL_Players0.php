@@ -17,6 +17,13 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/lolapi.js"></script>
     <title>LOL Players</title>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $(".advanced").click(function(){
+        $(".advanced-container").toggle();
+      });
+    });
+    </script>
   </head>
   <body>
     <?php include('assets/php/navbar.php') ?>
@@ -25,12 +32,15 @@
     <div class="row lolp" style="margin-bottom: 0px;">
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
         <div class="card-content white-text">
-        <div id="buscador">
+          <div class="nose" style="float:left; padding-left:3%; margin-top:-15px">
+            <button class="advanced waves-effect waves-light center btn lolpfilter deep-orange darken-3">Advanced Search</button>
+          </div>
+        <div id="buscador" style="float:left; padding-left:8%;">
             <input type="text" placeholder="Search Player" id="autocomplete-input" class="autocomplete black-text">
         </div>
         <input type=image src="assets/img/lupa.png" width="50" height="50">
         </div>
-          <div class="card-action">
+          <div class="card-action advanced-container" style="display:none;">
           <div class="roles text-white" style="float:left;" >
             <h6>Roles</h6>
             <p >
