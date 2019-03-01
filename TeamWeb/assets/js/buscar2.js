@@ -7,16 +7,20 @@ $(document).ready(function(){
     var id1,id2,id3,img1,img2,img3,id,accountid;
     var fecha = $(this).find(".age").html().trim();
     var date = new Date(fecha);
+
+
     function _calculateAge(birthday) { // birthday is a date
       var ageDifMs = Date.now() - birthday.getTime();
       var ageDate = new Date(ageDifMs); // miliseconds from epoch
       return Math.abs(ageDate.getUTCFullYear() - 1970);
     }
-    console.log(fecha);
-    console.log(date);
-    console.log(_calculateAge(date));
-    $(this).find(".age").html("Age: "+_calculateAge(date));
-    $(this).find(".age").css("display","block");
+    if(fecha!="0000-00-00"){
+      $(this).find(".age").html("Age: "+_calculateAge(date));
+      $(this).find(".age").css("display","block");
+    }else{
+      $(this).find(".age").html("");
+
+    }
     $.ajax({
       url: "https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + nick + "?api_key=" + key,
     }).done(function(data) {

@@ -10,6 +10,15 @@ $(document).ready(function(){
     hover: true
   });
    $('.tabs').tabs();
+   $(".advanced").click(function(){
+     $(".advanced-container").toggle();
+   });
+
+   var ejemplo = document.getElementById('ejemplo');
+    setTimeout(function() {
+        ejemplo.classList.add('cerrar');
+        document.body.style.overflowY= "visible";// despueés de cargar le devolvemos el scroll
+    }, 7000);
 
 
 });

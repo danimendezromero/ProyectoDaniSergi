@@ -25,7 +25,11 @@
 <body>
 <?php include('assets/php/navbar.php') ?>
   <!-- ========== Start of Content ============== -->
-
+  <div class="ejemplo" id="ejemplo">
+    <div class="preloader">
+        <p>Loading Stats</p>
+    </div>
+</div>
   <div class="container" >
     <div class="row perfil">
       <div class="card blue-grey darken-3 offset-l1 col l3 m3">

@@ -21,6 +21,7 @@
   <body>
     <?php include('assets/php/navbar.php') ?>
     <!-- ========== Start of Content ============== -->
+
     <form method="GET" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
     <div class="row lolp" style="margin-bottom: 0px;">
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
@@ -31,7 +32,7 @@
         <div id="buscador" style="float:left; padding-left:8%;">
             <input type="text" placeholder="Search Player" id="autocomplete-input" class="autocomplete black-text" name="buscar">
         </div>
-        <input type="submit" class="btn" value="Buscar">
+        <button style="margin-top:10px; margin-bottom:10px; margin-left:5px;" value="Buscar" class="waves-effect waves-light btn deep-orange darken-3"><i class="material-icons">search</i></button>
         </div>
           <div class="card-action advanced-container" style="display:none;">
           <div class="roles text-white" style="float:left;" >
@@ -93,15 +94,16 @@
             </div>
 
       </div>
+    </div>
     </form>
     <!--<form method="GET" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
     <div class="row lolp" style="margin-bottom: 0px;">
     <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
       <div class="card-content white-text row">
-      <div id="buscador" class="col l10">
+      <div id="buscador" class="col l10 m10">
           <input type="text" placeholder="Search Player" id="autocomplete-input" class="autocomplete black-text" name="buscar">
       </div>
-      <div class="col l2">
+      <div class="col l2 m2">
         <input type="submit" value="Buscar">
       </div>
 
@@ -182,22 +184,22 @@ for ($i = 0; $i < sizeof($resultado) ; $i++) {
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
         <div class="card-content white-text">
           <div class="row">
-            <div class="col l3">
+            <div class="col l3 m3">
               <br>
               <img src="assets/img/perfil_placeholder.jpg" alt="" class="circle responsive-img" width="150" height="150" style="margin-left:15%">
               <div class="age center" style="display:none">
                 '. $aux["fechanacimiento"] .'
               </div>
             </div>
-            <div class="col l9">
+            <div class="col l9 m9">
               <div class="row">
-                <div class="col l9">
+                <div class="col l9 m9">
                   <div class="name black-text">
                     <h4>'. $aux["nickname"] .'</h4>
                     <h6><b>LOL: '. $aux["lol_nickname"] .'</b></h6>
                   </div>
                 </div>
-                <div class="col l3">
+                <div class="col l3 m3">
                   <div class="contact">
                     <button class="waves-effect waves-light btn blue" type="button" name="contact" >Profile</button>
                   </div>
@@ -205,12 +207,12 @@ for ($i = 0; $i < sizeof($resultado) ; $i++) {
               </div>
               <div class="divider"></div>
               <div class="row">
-                <div class="col l9 roles">
+                <div class="col l9 m9 roles">
                   <img src="assets/img/roles_placeholder.png" alt="" class="responsive-img img1">
                   <img src="assets/img/roles_placeholder.png" alt="" class="responsive-img img2">
                   <img src="assets/img/roles_placeholder.png" alt="" class="responsive-img img3">
                 </div>
-                <div class="col l3">
+                <div class="col l3 m3">
                   <div class="language">
                     <p class="grey-text">Languages</p>
                     <p>'. $aux["idioma"] .'</p>
