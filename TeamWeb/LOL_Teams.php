@@ -99,7 +99,7 @@
   <div class="players">
   <?php
   $_POST["game"] = "1";
-  $_POST["table"] = "usuario";
+  $_POST["table"] = "equipo";
   include('assets/sqlquery/buscar2.php') ?>
 <?php
 for ($i = 0; $i < sizeof($resultado) ; $i++) {
@@ -117,7 +117,7 @@ for ($i = 0; $i < sizeof($resultado) ; $i++) {
               <div class="row">
                 <div class="col l9 m9">
                   <div class="name black-text">
-                    <h4>'. $aux["nickname"] .'</h4>
+                    <h4>'. $aux["nombre"] .'</h4>
 
                   </div>
                 </div>
