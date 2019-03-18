@@ -20,14 +20,20 @@ if(isset($_GET["buscar"]) && $_GET["buscar"]!="" && $_GET["buscar"]!=" "){
 
   $result = $conn->query($sql);
   $resultado = array();
-  while($row = $result->fetch_assoc()) {
-       $resultado[] = $row;
+  if($table=="usuario"){
+    while($row = $result->fetch_assoc()) {
+      $resultado[] = $row;
+    }
+  }else if($table=="equipo"){
+    while($row = $result->fetch_assoc()) {
+      $resultado[] = $row;
+      $sql2 = "SELECT * FROM usuario WHERE id_equipo1='$row["id_equipo"]' OR id_equipo2='$row["id_equipo"]'";
+      $result2 = $conn->query($sql);
+      while($row2 = $result2->fetch_assoc()) {
+        $resultado["miembros"] = $row2;
+      }
+    }
   }
-
-
-
-
-
 
 
 ?>
