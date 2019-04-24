@@ -2,28 +2,17 @@ $(document).ready(function() {
   $(".players").children().each(function(index, item) {
     var firstname,secondname,thirdname;
     var first = second = third = 0;
-    var fecha = $(this).find(".age").children().last().html().trim();
-    var date = new Date(fecha);
     var plataforma = $(this).find("input[name='plataforma']").val();
     var region = $(this).find("input[name='region']").val();
     var name = $(this).find("h6").text().split("#")[0];
     var code = $(this).find("h6").text().split("#")[1];
-    console.log(plataforma,region,name,code);
-    function _calculateAge(birthday) { // birthday is a date
-      var ageDifMs = Date.now() - birthday.getTime();
-      var ageDate = new Date(ageDifMs); // miliseconds from epoch
-      return Math.abs(ageDate.getUTCFullYear() - 1970);
-    }
-    if (fecha != "0000-00-00") {
-      $(this).find(".age").children().last().html("Age: " + _calculateAge(date));
-      $(this).find(".age").css("display", "block");
-    } else {
-      $(this).find(".age").children().last().html("");
+    var plataformaa = $(this).find("h6").text().split("#")[2];
+    var regionn = $(this).find(".regionoverwatch").text();
+    console.log(name,code, plataformaa, regionn);
 
-    }
 
     $.ajax({
-      url: "https://ow-api.com/v1/stats/" + plataforma + "/" + region + "/" + name + "-" + code + "/complete",
+      url: "https://ow-api.com/v1/stats/" + plataformaa + "/" + regionn + "/" + name + "-" + code + "/complete",
     }).done(function(data) {
       console.log(data);
       /*new Promise(
