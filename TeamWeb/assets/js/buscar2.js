@@ -9,18 +9,6 @@ $(document).ready(function(){
     var date = new Date(fecha);
 
 
-    function _calculateAge(birthday) { // birthday is a date
-      var ageDifMs = Date.now() - birthday.getTime();
-      var ageDate = new Date(ageDifMs); // miliseconds from epoch
-      return Math.abs(ageDate.getUTCFullYear() - 1970);
-    }
-    if(fecha!="0000-00-00"){
-      $(this).find(".age").html("Age: "+_calculateAge(date));
-      $(this).find(".age").css("display","block");
-    }else{
-      $(this).find(".age").html("");
-
-    }
     $.ajax({
       url: "https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + nick + "?api_key=" + key,
     }).done(function(data) {
@@ -51,6 +39,28 @@ $(document).ready(function(){
           $(item).find(".img2").attr("src","http://ddragon.leagueoflegends.com/cdn/9.1.1/img/champion/"+img2);
           $(item).find(".img3").attr("src","http://ddragon.leagueoflegends.com/cdn/9.1.1/img/champion/"+img3);
         });
+      });
+
+      $.ajax({
+        url: "https://euw1.api.riotgames.com//lol/league/v4/entries/by-summoner/"+id+"?api_key="+key,
+      }).done(function(data){
+        console.log(data);
+        if(data[0].queueType=="RANKED_SOLO_5x5"){
+          var img = document.createElement("img");
+          img.src = "assets/img/"+data[0].tier+".png";
+          img.width = "100";
+          $(item).find(".elo").html(img);
+        }else if(data[1].queueType=="RANKED_SOLO_5x5"){
+          var img = document.createElement("img");
+          img.src = "assets/img/"+data[1].tier+".png";
+          img.width = "100";
+          $(item).find(".elo").html(img);
+        }else{
+          var img = document.createElement("img");
+          img.src = "assets/img/"+data[0].tier+".png";
+          img.width = "100";
+          $(item).find(".elo").html(img);
+        }
       });
     });
 

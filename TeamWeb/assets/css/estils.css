@@ -370,3 +370,13 @@ h4{
   border: 1px solid #3c763d;
   margin-bottom: 20px;
 }
+
+.perfil p, .language p,#lolrank{
+  text-transform: capitalize;
+}
+.elo{
+  margin-left:25%;
+}
+.posicion img{
+  margin-top: 15%;
+}

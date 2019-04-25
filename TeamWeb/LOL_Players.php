@@ -22,7 +22,7 @@
     <?php include('assets/php/navbar.php') ?>
     <!-- ========== Start of Content ============== -->
 
-    <form method="GET" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+    <form method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
     <div class="row lolp" style="margin-bottom: 0px;">
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
         <div class="card-content white-text">
@@ -30,65 +30,84 @@
             <button type="button" class="advanced waves-effect waves-light center btn lolpfilter deep-orange darken-3">Advanced Search</button>
           </div>
         <div id="buscador" style="float:left; padding-left:8%;">
-            <input type="text" placeholder="Search Player" id="autocomplete-input" class="autocomplete black-text" name="buscar">
+            <input type="text" placeholder="Search Lol Player" id="autocomplete-input" class="autocomplete black-text" name="buscar" value="<?php
+            if(isset($_POST["buscar"])){
+              echo $_POST["buscar"];
+            } ?>">
         </div>
         <button style="margin-top:10px; margin-bottom:10px; margin-left:5px;" value="Buscar" class="waves-effect waves-light btn deep-orange darken-3"><i class="material-icons">search</i></button>
         </div>
           <div class="card-action advanced-container" style="display:none;">
           <div class="roles text-white" style="float:left;" >
             <h6>Roles</h6>
-            <p >
+            <br>
               <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white-text">img1</span>
+                <input type="checkbox" class="filled-in" name="top" <?php if(isset($_POST["top"])){echo "checked";} ?> value="top" data-val="top"/>
+                <span><img src="assets/img/Top.png" width="50" style="margin-top:-10px"></span>
+              </label>
+              <p >
+              <label>
+                <input type="checkbox" class="filled-in" name="jungle" <?php if(isset($_POST["jungle"])){echo "checked";} ?> value="jungle" data-val="jungle"/>
+                <span><img src="assets/img/Jungle.png"  width="50" style="margin-top:-10px"></span>
               </label>
             </p>
             <p >
               <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white-text">img2</span>
+                <input type="checkbox" class="filled-in" name="mid" <?php if(isset($_POST["mid"])){echo "checked";} ?> value="mid" data-val="mid"/>
+                <span><img src="assets/img/Mid.png"  width="50" style="margin-top:-10px"></span>
               </label>
             </p>
             <p >
               <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white-text">img3</span>
+                <input type="checkbox" class="filled-in" name="bot" <?php if(isset($_POST["bot"])){echo "checked";} ?> value="bot" data-val="bot"/>
+                <span><img src="assets/img/Bot.png"  width="50" style="margin-top:-10px"></span>
               </label>
             </p>
             <p >
               <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white- text">img4</span>
-              </label>
-            </p>
-            <p >
-              <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white-text">img5</span>
+                <input type="checkbox" class="filled-in" name="support" <?php if(isset($_POST["support"])){echo "checked";} ?> value="support" data-val="support"/>
+                <span><img src="assets/img/Support.png"  width="50" style="margin-top:-10px"></span>
               </label>
             </p>
 
           </div>
 
-           <div class="input-field" style="float:left; padding-left:10%;">
-              <select>
-                <option value="" disabled selected>Choose Region</option>
-                <option value="1">EU</option>
-                <option value="2">NA</option>
-                <option value="3">KR</option>
-              </select>
-            </div>
+
             <div class="input-field" style="float:left; padding-left:10%;">
-               <select>
+               <select name="server">
                  <option value="" disabled selected>Choose Server</option>
-                 <option value="1">EU</option>
-                 <option value="2">NA</option>
-                 <option value="3">KR</option>
+                 <option value="">All servers</option>
+                 <option value="LAS"  <?php if(isset($_POST["server"]) && $_POST["server"]=="LAS"){echo "selected";} ?>>LAS</option>
+                 <option value="KR"   <?php if(isset($_POST["server"]) && $_POST["server"]=="KR"){echo "selected";} ?>>KR</option>
+                 <option value="NA"   <?php if(isset($_POST["server"]) && $_POST["server"]=="NA"){echo "selected";} ?>>NA</option>
+                 <option value="EUNE" <?php if(isset($_POST["server"]) && $_POST["server"]=="EUNE"){echo "selected";} ?>>EUNE</option>
+                 <option value="EUW"  <?php if(isset($_POST["server"]) && $_POST["server"]=="EUW"){echo "selected";} ?>>EUW</option>
                </select>
              </div>
+             <p style="float:left; padding-left:10%; padding:2%;">
+                 <label>
+                   <input type="checkbox" name="edad" <?php if(isset($_POST["edad"])){echo "checked";} ?>/>
+                   <span class="white-text">+18</span>
+                 </label>
+               </p>
+             <!---
+             <div class="input-field" style="float:left; padding-left:10%;">
+                <select id="ranks">
+                  <option value="" disabled selected>Choose Rank</option>
+                  <option value="1">Iron</option>
+                  <option value="2">Bronze</option>
+                  <option value="3">Silver</option>
+                  <option value="4">Gold</option>
+                  <option value="5">Platinum</option>
+                  <option value="6">Diamond</option>
+                  <option value="7">Master</option>
+                  <option value="8">Grandmaster</option>
+                  <option value="9">Challenger</option>
+                </select>
+              </div>
+              --->
 
-
-            <div class="mb-1 center">
+            <div class="mb-1 right" style="padding-right:15%">
               <button class="waves-effect waves-light center btn lolpfilter">Update search</button>
             </div>
             </div>
@@ -96,90 +115,41 @@
       </div>
     </div>
     </form>
-    <!--<form method="GET" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
-    <div class="row lolp" style="margin-bottom: 0px;">
-    <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
-      <div class="card-content white-text row">
-      <div id="buscador" class="col l10 m10">
-          <input type="text" placeholder="Search Player" id="autocomplete-input" class="autocomplete black-text" name="buscar">
-      </div>
-      <div class="col l2 m2">
-        <input type="submit" value="Buscar">
-      </div>
-
-      </div>
-        <div class="card-action">
-        <div class="roles text-white" style="float:left;" >
-          <h6>Roles</h6>
-          <p >
-            <label>
-              <input type="checkbox" class="filled-in" />
-              <span class="white-text">img1</span>
-            </label>
-          </p>
-          <p >
-            <label>
-              <input type="checkbox" class="filled-in" />
-              <span class="white-text">img2</span>
-            </label>
-          </p>
-          <p >
-            <label>
-              <input type="checkbox" class="filled-in" />
-              <span class="white-text">img3</span>
-            </label>
-          </p>
-          <p >
-            <label>
-              <input type="checkbox" class="filled-in" />
-              <span class="white- text">img4</span>
-            </label>
-          </p>
-          <p >
-            <label>
-              <input type="checkbox" class="filled-in" />
-              <span class="white-text">img5</span>
-            </label>
-          </p>
-
-        </div>
-
-         <div class="input-field" style="float:left; padding-left:10%;">
-            <select>
-              <option value="" disabled selected>Choose Region</option>
-              <option value="1">EU</option>
-              <option value="2">NA</option>
-              <option value="3">KR</option>
-            </select>
-          </div>
-          <div class="input-field" style="float:left; padding-left:10%;">
-             <select>
-               <option value="" disabled selected>Choose Server</option>
-               <option value="1">EU</option>
-               <option value="2">NA</option>
-               <option value="3">KR</option>
-             </select>
-           </div>
-
-
-          <div class="mb-1 center">
-            <button class="waves-effect waves-light center btn lolpfilter">Update search</button>
-          </div>
-          </div>
-
-    </div>
-  </form>
-
-  </div>
-  --->
   <div class="players">
   <?php
   $_POST["game"] = "1";
   $_POST["table"] = "usuario";
   include('assets/sqlquery/buscar2.php') ?>
 <?php
-for ($i = 0; $i < sizeof($resultado) ; $i++) {
-  $aux = $resultado[$i];
+//eliminar los resultados menores de edad
+$resultado2 = [];
+if(isset($_POST["edad"])){
+  for ($i=0; $i < sizeof($resultado) ; $i++) {
+    $aux = $resultado[$i];
+    $hoy = new DateTime();
+    $fecha = new DateTime($aux["fechanacimiento"]);
+    $anys = $hoy->diff($fecha);
+    $aux["fechanacimiento"]=$anys->y;
+    if($anys->y>=18){
+      $resultado2[] = $aux;
+    }
+  }
+}else{
+  $resultado2 = $resultado;
+}
+if(sizeof($resultado2)==0){
+  echo '<div class="row lolp">
+      <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 text-center">
+        <h4 style="font-weight:400">No se han encontrado resultados, cambia los filtros.</h4>
+      </div>
+      </div>';
+}
+for ($i = 0; $i < sizeof($resultado2) ; $i++) {
+  $aux = $resultado2[$i];
+  $hoy = new DateTime();
+  $fecha = new DateTime($aux["fechanacimiento"]);
+  $anys = $hoy->diff($fecha);
+  $edad=$anys->y;
   echo '<div class="row lolp">
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
         <div class="card-content white-text">
@@ -187,8 +157,15 @@ for ($i = 0; $i < sizeof($resultado) ; $i++) {
             <div class="col l3 m3">
               <br>
               <img src="assets/img/perfil_placeholder.jpg" alt="" class="circle responsive-img" width="150" height="150" style="margin-left:15%">
-              <div class="age center" style="display:none">
-                '. $aux["fechanacimiento"] .'
+              <div class="age center">
+                  '. $edad . " y/o".'
+              </div>
+              <div class="row">
+                <div class="elo col l5">
+                </div>
+                <div class="posicion col l5 offset-l1">
+                  <img src="assets/img/'. $aux["lol_posicion"] .'.png"  width="100" />
+                </div>
               </div>
             </div>
             <div class="col l9 m9">
@@ -196,12 +173,12 @@ for ($i = 0; $i < sizeof($resultado) ; $i++) {
                 <div class="col l9 m9">
                   <div class="name black-text">
                     <h4>'. $aux["nickname"] .'</h4>
-                    <h6><b>LOL: '. $aux["lol_nickname"] .'</b></h6>
+                    <h6><b>'. $aux["lol_nickname"] .'</b></h6>
                   </div>
                 </div>
                 <div class="col l3 m3">
                   <div class="contact">
-                    <button class="waves-effect waves-light btn blue" type="button" name="contact" >Profile</button>
+                    <li style="list-style:none;"><a href="Profile.php?user='.$aux["id_usuario"].'" class="waves-effect waves-light btn blue">Profile</a></li>
                   </div>
                 </div>
               </div>

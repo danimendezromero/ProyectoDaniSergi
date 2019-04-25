@@ -14,9 +14,9 @@ $(document).ready(function() {
       owcode = JSON.parse(result)[0].ow_code;
       owplat = JSON.parse(result)[0].ow_plataforma;
 
-      console.log(lolnick);
+      
       $("#ow_nick").attr("value",ownick);
-      $("#ow_code").attr("value",owcode);
+      if(owcode!="0"){ $("#ow_code").attr("value",owcode)};
       $("#ow_region").attr("value",owserv);
       $("#ow_plataforma").attr("value",owplat);
       $("#lol_nick").attr("value",lolnick);

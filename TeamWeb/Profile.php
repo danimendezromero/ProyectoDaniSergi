@@ -25,12 +25,7 @@
 <body>
 <?php include('assets/php/navbar.php') ?>
   <!-- ========== Start of Content ============== -->
-  <div class="ejemplo" id="ejemplo">
-    <div class="preloader">
-        <p>Loading Stats</p>
-    </div>
-</div>
-  <div class="container" >
+  <div class="container">
     <div class="row perfil">
       <div class="card blue-grey darken-3 offset-l1 col l3 m3">
         <div class="center" style="padding-top:20px;">
@@ -50,8 +45,12 @@
         <p id="lolregion" class="textoclas"></p>
         <div class="center" style="margin-bottom:10%; padding-top:3%">
           <?php
+          if(isset($_SESSION["userid"])){
               $id = $_SESSION["userid"];
-              echo "<li style='list-style:none;'><a href='EditProfile.php?user=".$id."' class='waves-effect waves-light btn blue-grey darken-2'>Edit Profile</a></li>";
+              if($_GET["user"]==$id){
+                echo "<li style='list-style:none;'><a href='EditProfile.php?user=".$id."' class='waves-effect waves-light btn blue-grey darken-2'>Edit Profile</a></li>";
+              }
+            }
           ?>
         </div>
 

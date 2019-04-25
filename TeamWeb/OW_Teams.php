@@ -21,7 +21,6 @@
     <?php include('assets/php/navbar.php') ?>
 
     <!-- ========== Start of Content ============== -->
-
     <form method="GET" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
     <div class="row lolp" style="margin-bottom: 0px;">
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
@@ -99,26 +98,33 @@
 
   <div class="players">
   <?php
-  $_POST["game"] = "1";
-  $_POST["table"] = "usuario";
+  $_POST["game"] = "2";
+  $_POST["table"] = "equipo";
   include('assets/sqlquery/buscar2.php') ?>
 <?php
 for ($i = 0; $i < sizeof($resultado) ; $i++) {
+ $miembros = array();
+ for ($k=0; $k < 5; $k++) {
+   $miembros[$k] = "<a href='#'>Enviar solicitud</a>";
+ }
   $aux = $resultado[$i];
+  for ($j=0; $j < sizeof($aux["miembros"]); $j++) {
+    $miembros[$j] = "<a href='/ProyectoDaniSergi-master/TeamWeb/Profile.php?user=". $aux["miembros"][$j]["id_usuario"] . "'>". $aux["miembros"][$j]["nickname"] ."</a>";
+  }
   echo '<div class="row lolp">
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
         <div class="card-content white-text">
           <div class="row">
             <div class="col l3 m3">
               <br>
-              <img src="assets/img/perfil_placeholder.jpg" alt="" class="circle responsive-img" width="150" height="150" style="margin-left:15%">
+              <img src="assets/img/perfil_placeholder.jpg" alt="" class="circle responsive-img" width="150" height="150">
 
             </div>
             <div class="col l9 m9">
               <div class="row">
                 <div class="col l9 m9">
                   <div class="name black-text">
-                    <h4>'. $aux["nickname"] .'</h4>
+                    <h4>'. $aux["nombre"] .'</h4>
 
                   </div>
                 </div>
@@ -135,11 +141,11 @@ for ($i = 0; $i < sizeof($resultado) ; $i++) {
                     <td class=" center" id="tablag"><img src="assets/img/roles_placeholder.png" alt="" class="responsive-img img3"></td>
                   </tr>
                   <tr>
-                    <td class="center" id="tablag";>Name1</td>
-                    <td class="center" id="tablag";>Name2</td>
-                    <td class="center" id="tablag";>Name3</td>
-                    <td class="center" id="tablag";>Name4</td>
-                    <td class="center" id="tablag";>Name4</td>
+                    <td class="center" id="tablag";>'. $miembros[0] .'</a></td>
+                    <td class="center" id="tablag";>'. $miembros[1] .'</td>
+                    <td class="center" id="tablag";>'. $miembros[2] .'</td>
+                    <td class="center" id="tablag";>'. $miembros[3] .'</td>
+                    <td class="center" id="tablag";>'. $miembros[4] .'</td>
                   </tr>
                 </table>
                 </div>
@@ -153,7 +159,6 @@ for ($i = 0; $i < sizeof($resultado) ; $i++) {
       </div>';
       } ?>
   </div>
-
     <!-- ========== End of Content ============== -->
 
     <?php include('assets/php/footer.php') ?>

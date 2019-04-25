@@ -361,10 +361,10 @@
                   </div>
 
                   <div class="row">
-                    <img src="assets/img/pergamino11.png" alt="" class="responsive-img img1" style="width:400;height:300px">
+                    <img src="assets/img/pergamino11.png" alt="" class="responsive-img img1" style="width:400;height:300px; padding-left:7%;">
                     <img src="assets/img/pergamino22.png" alt="" class="responsive-img img1" style="width:400;height:300px; padding-left:4%">
                     <img src="assets/img/pergamino33.png" alt="" class="responsive-img img1" style="width:400;height:300px; padding-left:4%">
-                    <img src="assets/img/pergamino44.png" alt="" class="responsive-img img1" style="width:400;height:300px; padding-left:4%">
+                    <!--<img src="assets/img/pergamino44.png" alt="" class="responsive-img img1" style="width:400;height:300px; padding-left:4%">-->
                   </div>
           </div>
         </div>

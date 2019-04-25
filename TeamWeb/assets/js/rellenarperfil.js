@@ -17,7 +17,9 @@ $(document).ready(function() {
       console.log(lolnick);
 
       $("#languages").html(languages);
-      $("#ownick").html(ownick + "#" +  owcode + " " + owplat.toUpperCase());
+      if (ownick!=" ") {
+        $("#ownick").html(ownick + "#" +  owcode + " " + owplat.toUpperCase()) ;
+      }
       $("#owregion").html(owserv);
       $("#lolnick").html(lolnick);
       $("#lolregion").html(lolserv);
