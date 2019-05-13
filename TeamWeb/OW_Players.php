@@ -22,6 +22,7 @@
   <?php include('assets/php/navbar.php') ?>
 
     <!-- ========== Start of Content ============== -->
+    <main>
   <form method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
   <div class="row lolp" style="margin-bottom: 0px;">
     <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
@@ -125,7 +126,7 @@ for ($i = 0; $i < sizeof($resultado2) ; $i++) {
             <div class="col l3 m3">
               <br>
               <img src="assets/img/perfil_placeholder.jpg" alt="" class="circle responsive-img" width="150" height="150">
-              <div class="age center">
+              <div class="age center" style="padding-right:60px;">
                 '. $edad . " y/o".'
               </div>
             </div>
@@ -168,6 +169,8 @@ for ($i = 0; $i < sizeof($resultado2) ; $i++) {
       } ?>
   </div>
 
+
+  </main>
 
 
     <!-- ========== End of Content ============== -->

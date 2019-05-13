@@ -31,13 +31,13 @@
     <div class="container" >
       <div class="row perfil" >
         <div class="card #546e7a col l6 m6" style="background-color:#546e7a; -webkit-box-shadow: none; box-shadow: none ">
-          <div class="center" style="padding-top:20px;">
-            <img class="image1" id="fotoperfil" src="assets/img/leaguehome.jpg" border="1" alt="Este es el ejemplo de un texto alternativo" width="400px" height="400px">
+          <div class="center home" style="padding-top:20px;">
+            <img class="image1 responsive-img noselected" src="assets/img/leaguehome.jpg" border="1" alt="Este es el ejemplo de un texto alternativo">
           </div>
         </div>
         <div class="card col l6 m6" style="background-color:#546e7a; -webkit-box-shadow: none; box-shadow: none ">
-            <div class="center" style="padding-top:20px;">
-              <img class="image2" id="fotoperfil" src="assets/img/csgohome.jpg" border="1" alt="Este es el ejemplo de un texto alternativo" width="400px" height="400px">
+            <div class="center home" style="padding-top:20px;">
+              <img class="image2 responsive-img selected" src="assets/img/owhome.jpg" border="1" alt="Este es el ejemplo de un texto alternativo">
             </div>
         </div>
 
@@ -360,10 +360,11 @@
                     </form></div>
                   </div>
 
-                  <div class="row">
-                    <img src="assets/img/pergamino11.png" alt="" class="responsive-img img1" style="width:400;height:300px; padding-left:7%;">
-                    <img src="assets/img/pergamino22.png" alt="" class="responsive-img img1" style="width:400;height:300px; padding-left:4%">
-                    <img src="assets/img/pergamino33.png" alt="" class="responsive-img img1" style="width:400;height:300px; padding-left:4%">
+                  <div class="row col s11">
+                    <div class="col s2"></div>
+                    <img class="col s3" src="assets/img/pergamino11.png" alt="" class="responsive-img img1" style="width:400;height:300px; ">
+                    <img class="col s3" src="assets/img/pergamino22.png" alt="" class="responsive-img img1" style="width:400;height:300px; ">
+                    <img class="col s3" src="assets/img/pergamino33.png" alt="" class="responsive-img img1" style="width:400;height:300px; ">
                     <!--<img src="assets/img/pergamino44.png" alt="" class="responsive-img img1" style="width:400;height:300px; padding-left:4%">-->
                   </div>
           </div>

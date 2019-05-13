@@ -25,30 +25,48 @@
 <body>
 <?php include('assets/php/navbar.php') ?>
   <!-- ========== Start of Content ============== -->
+  <main>
+  <?php include('assets/php/perfilquery.php') ?>
+  <?php
+  if($user["fechanacimiento"]!="0000-00-00"){
+    $hoy = new DateTime();
+    $fecha = new DateTime($user["fechanacimiento"]);
+    $anys = $hoy->diff($fecha);
+    $edad=$anys->y;
+  }else{
+    $edad = "-";
+  }
+  if(isset($user["image"])){
+    $img = "assets/userimg/".$user["image"].".jpg";
+  }else{
+    $img = "assets/userimg/0.jpg";
+  }
+
+  ?>
   <div class="container">
     <div class="row perfil">
       <div class="card blue-grey darken-3 offset-l1 col l3 m3">
         <div class="center" style="padding-top:20px;">
-          <img class="circle" id="fotoperfil" src="assets/img/prueba.png" border="1" alt="Este es el ejemplo de un texto alternativo" width="150" height="150">
+          <img class="circle" id="fotoperfil" src="<?php echo $img ?>" border="1" alt="Este es el ejemplo de un texto alternativo" width="150" height="150">
         </div>
-        <p id="nickname" class="grey-text text-lighten-3 center textoprin">Mofitex</p>
-        <p class="grey-text text-lighten-3 center textoprin">19 y/o</p>
+        <p id="nickname" class="grey-text text-lighten-3 center textoprin"><?php echo $user["nickname"] ?></p>
+        <p class="grey-text text-lighten-3 center textoprin"><?php echo $edad ?> y/o</p>
         <p class="textotitulo">Languages</p>
-        <p id="languages" class="textoclas"></p>
+        <p id="languages" class="textoclas"><?php echo $user['idioma'] ?></p>
         <p class="textotitulo">OW Nickname</p>
-        <p id="ownick" class="textoclas"></p>
+        <p id="ownick" class="textoclas"><?php echo $user['ow_nickname'] ?></p>
         <p class="textotitulo">OW server region</p>
-        <p id="owregion" class="textoclas"></p>
+        <p id="owregion" class="textoclas"><?php echo $user['ow_region'] ?></p>
         <p class="textotitulo">LOL Nickname</p>
-        <p id="lolnick" class="textoclas"></p>
-        <p class="textotitulo">Lol server region</p>
-        <p id="lolregion" class="textoclas"></p>
+        <p id="lolnick" class="textoclas"><?php echo $user['lol_nickname'] ?></p>
+        <p class="textotitulo">Lol Server</p>
+        <p id="lolregion" class="textoclas"><?php echo $user['lol_region'] ?></p>
         <div class="center" style="margin-bottom:10%; padding-top:3%">
           <?php
           if(isset($_SESSION["userid"])){
               $id = $_SESSION["userid"];
               if($_GET["user"]==$id){
-                echo "<li style='list-style:none;'><a href='EditProfile.php?user=".$id."' class='waves-effect waves-light btn blue-grey darken-2'>Edit Profile</a></li>";
+                echo "<li style='list-style:none;'><a href='EditProfile.php' class='waves-effect waves-light btn blue-grey darken-2'>Edit Profile</a></li>";
               }
             }
           ?>
@@ -161,6 +179,8 @@
 
   </div>
 
+
+  </main>
   <!-- ========== End of Content ============== -->
   <?php include('assets/php/footer.php') ?>
 </body>

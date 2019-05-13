@@ -21,6 +21,9 @@
     <?php include('assets/php/navbar.php') ?>
 
     <!-- ========== Start of Content ============== -->
+    <main>
+
+
     <div class="container faq row">
       <div class="col l2 white faq1">
         <ul class="collapsible expandable">
@@ -60,6 +63,7 @@
 
       </div>
     </div>
+      </main>
     <!-- ========== End of Content ============== -->
     <?php include('assets/php/footer.php') ?>
   </body>

@@ -23,6 +23,7 @@
   <?php include('assets/php/navbar.php') ?>
 
   <!-- ========== Start of Content ============== -->
+  <main>
   <div class="row" style="padding-top:30px; Width:500px">
      <div class="col s12">
        <form method="post" action="register.php" enctype="multipart/form-data">
@@ -54,7 +55,28 @@
                <option value="10">RU</option>
              </select>
            </div>
-
+           <div class="row" style="margin-left:0px">
+             <p>Game</p>
+             <br>
+             <select class="browser-default" name="game" id="game">
+               <option value="" disabled selected>Choose your option</option>
+               <option value="1">LOL</option>
+               <option value="2">OW</option>
+             </select>
+           </div>
+           <div class="row">
+              <div class="col s10" style="margin-top: -5px">
+           <div class="file-field input-field">
+           <div class="btn">
+             <span for="image">File</span>
+             <input id="image" name="image" size="50" type="file">
+           </div>
+           <div class="file-path-wrapper">
+             <input class="file-path" type="text">
+           </div>
+         </div>
+       </div>
+    </div>
              <button type="submit" class="waves-effect waves-light btn" style="margin-left:37%; margin-top:20px; margin-bottom:20px; " name="create_team">Create Team</button>
 
          </div>
@@ -66,6 +88,8 @@
      </div>
    </div>
 
+
+   </main>
 
 
   <!-- ========== End of Content ============== -->

@@ -16,7 +16,7 @@
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <title>Log In</title>
+    <title>Drop Out</title>
   </head>
   <body>
     <?php include('assets/php/navbar.php') ?>
@@ -25,38 +25,33 @@
     <div class="row" style="padding-top:30px; Width:500px">
         <div class="col s12">
           <div class="card blue-grey darken-3">
-            <form method="post" action="login.php">
+            <form method="post" action="Baja.php">
             <div class="card-content white-text">
-              <span class="card-title">Log In</span>
+              <span class="card-title">Drop Out</span>
               <?php include('assets/php/errors.php'); ?>
               <div class="row">
                 <div class="input-field col s10" style="margin-bottom:-5px">
-                  <input id="last_name" type="text" class="validate" name="username">
-                  <label for="last_name">Username*</label>
+                  <input id="why" type="text" class="validate" name="why">
+                  <label for="why">Why do you want to drop out?*</label>
                 </div>
               </div>
               <div class="row cuadrado2" style="margin-bottom:-10px">
                 <div class="input-field col s10">
-                  <input id="password" type="password" class="validate" name="password">
-                  <label for="password">Password*</label>
+                  <input id="pin" type="number" class="validate" name="pin">
+                  <label for="pin">Pin*</label>
                 </div>
               </div>
-              <div class="row cuadrado2">
+              <button type="submit" class="waves-effect waves-light btn" name="del_user" style="margin-left:13%; margin-bottom: 20px; width:300px;">Drop User</button>
 
-              </div>
-              <button type="submit" class="waves-effect waves-light btn" name="login_user" style="margin-left:13%; margin-bottom: 20px; width:300px;">Log In</button>
-              <div class="center" style="margin-bottom:10px">
-                <p><a href="fpassword.php" class="white-text">Forgotten your password</a></p>
-              </div>
-              <p class="f1" style="text-align:center">If you don't already have an account click <a href="register.php">Register</a></p>
+
             </div>
 
           </form>
           </div>
         </div>
       </div>
-</main>
 
+</main>
     <!-- ========== End of Content ============== -->
     <?php include('assets/php/footer.php') ?>
   </body>

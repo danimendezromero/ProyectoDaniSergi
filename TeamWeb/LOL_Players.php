@@ -21,7 +21,7 @@
   <body>
     <?php include('assets/php/navbar.php') ?>
     <!-- ========== Start of Content ============== -->
-
+<main>
     <form method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
     <div class="row lolp" style="margin-bottom: 0px;">
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
@@ -129,7 +129,6 @@ if(isset($_POST["edad"])){
     $hoy = new DateTime();
     $fecha = new DateTime($aux["fechanacimiento"]);
     $anys = $hoy->diff($fecha);
-    $aux["fechanacimiento"]=$anys->y;
     if($anys->y>=18){
       $resultado2[] = $aux;
     }
@@ -140,7 +139,7 @@ if(isset($_POST["edad"])){
 if(sizeof($resultado2)==0){
   echo '<div class="row lolp">
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 text-center">
-        <h4 style="font-weight:400">No se han encontrado resultados, cambia los filtros.</h4>
+        <h4 style="font-weight:400">No results found, change the filters.</h4>
       </div>
       </div>';
 }
@@ -156,7 +155,7 @@ for ($i = 0; $i < sizeof($resultado2) ; $i++) {
           <div class="row">
             <div class="col l3 m3">
               <br>
-              <img src="assets/img/perfil_placeholder.jpg" alt="" class="circle responsive-img" width="150" height="150" style="margin-left:15%">
+              <img src="assets/userimg/'. $aux["image"] .'.jpg" alt="" class="circle responsive-img" width="150" height="150" style="margin-left:15%">
               <div class="age center">
                   '. $edad . " y/o".'
               </div>
@@ -207,6 +206,8 @@ for ($i = 0; $i < sizeof($resultado2) ; $i++) {
       } ?>
   </div>
 
+
+  </main>
     <!-- ========== End of Content ============== -->
     <?php include('assets/php/footer.php') ?>
   </body>

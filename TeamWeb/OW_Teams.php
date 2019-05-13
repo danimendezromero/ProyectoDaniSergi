@@ -21,6 +21,7 @@
     <?php include('assets/php/navbar.php') ?>
 
     <!-- ========== Start of Content ============== -->
+    <main>
     <form method="GET" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
     <div class="row lolp" style="margin-bottom: 0px;">
       <div class="card blue-grey darken-3 col l8 m8 offset-l2 offset-m2 lolpfilter">
@@ -34,57 +35,12 @@
         <button style="margin-top:10px; margin-bottom:10px; margin-left:5px;" value="Buscar" class="waves-effect waves-light btn deep-orange darken-3"><i class="material-icons">search</i></button>
         </div>
           <div class="card-action advanced-container" style="display:none;">
-          <div class="roles text-white" style="float:left;" >
-            <h6>Roles</h6>
-            <p >
-              <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white-text">img1</span>
-              </label>
-            </p>
-            <p >
-              <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white-text">img2</span>
-              </label>
-            </p>
-            <p >
-              <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white-text">img3</span>
-              </label>
-            </p>
-            <p >
-              <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white- text">img4</span>
-              </label>
-            </p>
-            <p >
-              <label>
-                <input type="checkbox" class="filled-in" />
-                <span class="white-text">img5</span>
-              </label>
-            </p>
-
-          </div>
-
-           <div class="input-field" style="float:left; padding-left:10%;">
-              <select>
-                <option value="" disabled selected>Choose Region</option>
-                <option value="1">EU</option>
-                <option value="2">NA</option>
-                <option value="3">KR</option>
-              </select>
-            </div>
-            <div class="input-field" style="float:left; padding-left:10%;">
-               <select>
-                 <option value="" disabled selected>Choose Server</option>
-                 <option value="1">EU</option>
-                 <option value="2">NA</option>
-                 <option value="3">KR</option>
-               </select>
-             </div>
+            <p style="float:left; padding-left:10%; padding:2%;">
+                <label>
+                  <input type="checkbox" name="missing" <?php if(isset($_POST["missing"])){echo "checked";} ?>/>
+                  <span class="white-text">Missing Members</span>
+                </label>
+              </p>
 
 
             <div class="mb-1 center">
@@ -103,11 +59,15 @@
   include('assets/sqlquery/buscar2.php') ?>
 <?php
 for ($i = 0; $i < sizeof($resultado) ; $i++) {
+  $aux = $resultado[$i];
+  if(isset($_POST["missing"]) && sizeof($aux["miembros"])==5){
+    continue;
+  }
  $miembros = array();
  for ($k=0; $k < 5; $k++) {
    $miembros[$k] = "<a href='#'>Enviar solicitud</a>";
  }
-  $aux = $resultado[$i];
+
   for ($j=0; $j < sizeof($aux["miembros"]); $j++) {
     $miembros[$j] = "<a href='/ProyectoDaniSergi-master/TeamWeb/Profile.php?user=". $aux["miembros"][$j]["id_usuario"] . "'>". $aux["miembros"][$j]["nickname"] ."</a>";
   }
@@ -161,6 +121,8 @@ for ($i = 0; $i < sizeof($resultado) ; $i++) {
   </div>
     <!-- ========== End of Content ============== -->
 
+
+    </main>
     <?php include('assets/php/footer.php') ?>
   </body>
 </html>

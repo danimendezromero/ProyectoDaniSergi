@@ -23,6 +23,7 @@
   <?php include('assets/php/navbar.php') ?>
 
   <!-- ========== Start of Content ============== -->
+  <main>
   <div class="row" style="padding-top:30px; Width:500px">
      <div class="col s12">
        <form method="post" action="register.php" enctype="multipart/form-data">
@@ -30,6 +31,7 @@
          <div class="card-content white-text">
            <span class="card-title">Register</span>
            <?php include('assets/php/errors.php'); ?>
+
            <div class="row">
              <div class="input-field col s10" style="margin-bottom:-15px">
                <input id="username" type="text" class="validate" name="username" autocomplete="off">
@@ -43,26 +45,21 @@
              </div>
            </div>
            <div class="row">
-             <div class="input-field col s10" >
+             <div class="input-field col s10" style="margin-bottom:-15px">
                <input id="password" type="password" class="validate" name="password" autocomplete="off">
                <label for="password">Password*</label>
              </div>
            </div>
+           <div class="row">
+             <div class="input-field col s10" >
+               <br>
+               <input id="pin" type="number" class="validate" name="pin" autocomplete="off" maxlength="4">
 
-           <p style="margin-bottom:10px">
-             <label>
-               <input type="checkbox" class="filled-in" />
-               <span style="font-size: 13px;">
-                 I Agree to the Personal Data Consent</span>
-             </label>
-           </p>
-           <p>
-             <label>
-               <input type="checkbox" class="filled-in" />
-               <span style="font-size: 13px;">I Agree to the Terms of Use & Privacy Policy</span>
-             </label>
-             </p>
-             <button type="submit" class="waves-effect waves-light btn" style="margin-left:37%; margin-top:20px; margin-bottom:20px; " name="reg_user">Register</button>
+               <label for="pin">Pin* We recommend 4 Numbers (Will be for recover account)</label>
+             </div>
+           </div>
+
+             <button type="submit" class="waves-effect waves-light btn" style="margin-left:37%; margin-bottom:20px; " name="reg_user">Register</button>
            <p class="f1" style="text-align:center">If you already have an account click <a href="login.php">Log In</a></p>
          </div>
 
@@ -75,6 +72,7 @@
 
 
 
+   </main>
   <!-- ========== End of Content ============== -->
   <?php include('assets/php/footer.php') ?>
 </body>
